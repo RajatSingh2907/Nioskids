@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   Code2,
   Compass,
+  ClipboardList,
   FileCheck2,
   GraduationCap,
   HeartHandshake,
@@ -20,9 +21,19 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
+  ClipboardCheck,
   Trees,
   UsersRound
 } from "lucide-react";
+
+export const siteContact = {
+  phone: "+91 98765 43210",
+  secondaryPhone: "+91 91234 56780",
+  email: "hello@nioskids.example",
+  location: "Online support with local counselling slots",
+  hours: "Mon-Sat, 10:00 AM - 6:00 PM",
+  whatsapp: "https://wa.me/919876543210?text=Hi%20NIOS%20Kids%2C%20I%20want%20parent%20counselling%20for%20my%20child."
+};
 
 export const navItems = [
   ["Home", "#home", Sparkles],
@@ -197,37 +208,55 @@ export const galleryItems = [
     title: "Story Time Circle",
     category: "Reading",
     caption: "Guided reading, speaking prompts and vocabulary games.",
-    color: "from-sky/55 to-mint/50"
+    color: "from-sky/55 to-mint/50",
+    age: "Ages 6-9",
+    proof: "Reading fluency",
+    outcome: "Children practice expression, recall and vocabulary through guided story prompts."
   },
   {
     title: "Science Quest",
     category: "Science",
     caption: "Observation-led activities that make concepts visible.",
-    color: "from-sun/60 to-coral/45"
+    color: "from-sun/60 to-coral/45",
+    age: "Ages 9-13",
+    proof: "Concept clarity",
+    outcome: "Learners observe, record and explain simple experiments in their own words."
   },
   {
     title: "Art Studio",
     category: "Creative",
     caption: "Creative expression connected to language and confidence.",
-    color: "from-coral/45 to-grape/40"
+    color: "from-coral/45 to-grape/40",
+    age: "Ages 4-10",
+    proof: "Creative confidence",
+    outcome: "Art tasks become speaking, storytelling and fine-motor confidence builders."
   },
   {
     title: "Project Day",
     category: "Projects",
     caption: "Children explain, build and present what they learned.",
-    color: "from-mint/55 to-sky/45"
+    color: "from-mint/55 to-sky/45",
+    age: "Ages 8-16",
+    proof: "Presentation skill",
+    outcome: "Project demos help parents see understanding, effort and independent thinking."
   },
   {
     title: "Coding Puzzle",
     category: "STEM",
     caption: "Logic games and early coding patterns for future skills.",
-    color: "from-grape/45 to-sky/50"
+    color: "from-grape/45 to-sky/50",
+    age: "Ages 10-16",
+    proof: "Problem solving",
+    outcome: "Puzzle-based coding builds sequencing, debugging and patient thinking."
   },
   {
     title: "Parent Review",
     category: "Parents",
     caption: "Progress conversations that make next steps clear.",
-    color: "from-orange/45 to-sun/55"
+    color: "from-orange/45 to-sun/55",
+    age: "Parents",
+    proof: "Progress clarity",
+    outcome: "Families get a simple picture of current progress, gaps and next actions."
   }
 ];
 
@@ -258,4 +287,69 @@ export const faqs = [
   ["Do parents get progress updates?", "Yes. Parents get milestone updates, weekly focus areas and practical next steps so they know how to support learning at home."],
   ["Are activities age appropriate?", "Programs are grouped by learning stage, and activities simplify or deepen based on the child's age, confidence and academic readiness."],
   ["Is this a replacement for official NIOS?", "No. This is a learning-support and mentoring platform. Official enrolment, eligibility, exam rules and certification remain with NIOS."]
+];
+
+export const niosInfoHighlights = [
+  ["OBE", "Open Basic Education for foundational learners, commonly mapped around Std. III to VIII readiness."],
+  ["Secondary", "Class 10 level support for subject planning, study rhythm, assignments and exam preparation."],
+  ["Senior Secondary", "Class 12 level guidance for subject clarity, revision planning and future pathway counselling."],
+  ["Support Role", "We provide learning support, counselling and mentoring. Official rules and certification remain with NIOS."]
+];
+
+export const niosInfoCards: [string, string, LucideIcon, string[]][] = [
+  [
+    "What is OBE?",
+    "OBE means Open Basic Education. It supports learners who need foundational academic readiness before secondary-level study.",
+    BookOpen,
+    ["Useful for flexible foundational learning", "Focuses on literacy, numeracy and confidence", "Often helpful for children who need a gentler bridge"]
+  ],
+  [
+    "What is Secondary?",
+    "Secondary refers to Class 10 level academic preparation. Families usually need subject clarity, practice rhythm and exam-readiness support.",
+    GraduationCap,
+    ["Class 10 level learning support", "Subject planning and study routine", "Practice, revision and progress tracking"]
+  ],
+  [
+    "What is Senior Secondary?",
+    "Senior Secondary refers to Class 12 level academic preparation with deeper subject focus and future pathway planning.",
+    FileCheck2,
+    ["Class 12 level mentoring", "Stream and subject guidance", "Revision checkpoints and future planning"]
+  ],
+  [
+    "Documents Parents Usually Prepare",
+    "Exact requirements should be verified with official NIOS instructions, but families generally prepare identity, age and education records.",
+    ClipboardList,
+    ["Birth/age proof", "Address and identity proof", "Previous education records when applicable", "Recent photographs and parent details"]
+  ],
+  [
+    "TMA Support",
+    "Tutor Marked Assignments can feel confusing for families. We help children understand, plan and complete assignment-style learning work.",
+    ClipboardCheck,
+    ["Assignment planning guidance", "Topic understanding and drafting support", "Submission timeline reminders"]
+  ],
+  [
+    "Practical & Exam Readiness",
+    "For subjects that involve practicals or structured exams, families need early planning and calm revision support.",
+    CalendarCheck,
+    ["Practical-readiness awareness", "Revision schedule support", "Previous question practice habits"]
+  ],
+  [
+    "Is the NIOS Certificate Valid?",
+    "NIOS is a recognized open schooling board. Parents should always verify the latest recognition, eligibility and admission details from official NIOS sources.",
+    ShieldCheck,
+    ["Recognized open schooling pathway", "Useful for flexible learners", "Official confirmation should come from NIOS"]
+  ],
+  [
+    "Are We Official NIOS?",
+    "We are positioned as a learning-support and mentoring platform, not a replacement for official NIOS. Official registration, eligibility and certification remain with NIOS.",
+    HeartHandshake,
+    ["Learning support and counselling", "Parent guidance and mentoring", "Official rules remain with NIOS"]
+  ]
+];
+
+export const niosInfoSteps = [
+  ["Understand", "We discuss your child's current level, learning needs and family goals."],
+  ["Plan", "We map the right stage: OBE, Secondary, Senior Secondary or remedial support."],
+  ["Support", "Children receive guided learning, practice routines, activities and review checkpoints."],
+  ["Review", "Parents get clarity on progress, next steps and exam-readiness milestones."]
 ];

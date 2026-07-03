@@ -2,6 +2,7 @@
 
 import { Send, Sparkles } from "lucide-react";
 import { useState } from "react";
+import { siteContact } from "@/lib/site-data";
 
 type FormState = {
   name: string;
@@ -28,6 +29,7 @@ export function ContactForm() {
       return;
     }
     setStatus("success");
+    window.open(siteContact.whatsapp, "_blank", "noopener,noreferrer");
     setForm(initialState);
   }
 
@@ -39,7 +41,7 @@ export function ContactForm() {
       <textarea aria-label="Message" placeholder="Tell us about your child's learning needs" rows={5} value={form.message} onChange={(event) => updateField("message", event.target.value)} />
       <button type="submit">Request Counselling <Send className="size-5" aria-hidden /></button>
       {status === "error" && <p className="form-status error">Please add parent name, phone number and child age.</p>}
-      {status === "success" && <p className="form-status success"><Sparkles className="size-4" aria-hidden /> Enquiry saved locally. We will connect this to email/CRM in the production pass.</p>}
+      {status === "success" && <p className="form-status success"><Sparkles className="size-4" aria-hidden /> Opening WhatsApp with dummy counselling contact. We can replace this with real CRM/email later.</p>}
     </form>
   );
 }

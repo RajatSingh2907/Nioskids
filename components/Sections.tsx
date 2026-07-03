@@ -11,6 +11,7 @@ import {
   parentProof,
   parentTrustReasons,
   programs,
+  siteContact,
   stats,
   teachers,
   trustBadges
@@ -112,6 +113,9 @@ export function LearningSupportSection() {
           </div>
           <a href="#contact" className="support-cta">
             Discuss Your Child&apos;s Learning Needs <ArrowRight className="size-4" aria-hidden />
+          </a>
+          <a href="/nios-info" className="support-secondary-cta">
+            Read NIOS Parent Info <ArrowRight className="size-4" aria-hidden />
           </a>
         </Reveal>
         <div className="support-grid">
@@ -277,9 +281,9 @@ export function ContactSection() {
           <h2 className="mt-5 font-heading text-6xl font-extrabold leading-none text-ink">Start With A Parent Counselling Call</h2>
           <p className="mt-5 text-lg leading-8 text-ink/75">Tell us your child&apos;s age, current learning situation and NIOS goals. We will suggest the right program stage and next step.</p>
           <div className="mt-8 space-y-3 font-bold text-ink/80">
-            <p><Phone className="mr-2 inline size-5" /> +91 98765 43210</p>
-            <p><Mail className="mr-2 inline size-5" /> hello@nioskids.example</p>
-            <p><MapPin className="mr-2 inline size-5" /> Online and guided learning support</p>
+            <p><Phone className="mr-2 inline size-5" /> {siteContact.phone}</p>
+            <p><Mail className="mr-2 inline size-5" /> {siteContact.email}</p>
+            <p><MapPin className="mr-2 inline size-5" /> {siteContact.location}</p>
           </div>
           <InteractiveMap />
         </Reveal>
