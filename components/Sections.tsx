@@ -7,7 +7,9 @@ import {
   admissions,
   features,
   journey,
+  learningPathways,
   parentProof,
+  parentTrustReasons,
   programs,
   stats,
   teachers,
@@ -84,6 +86,56 @@ export function FeaturesSection() {
             <Icon className="size-12 text-ink" aria-hidden />
             <h3>{title}</h3>
             <p>{copy}</p>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function LearningSupportSection() {
+  return (
+    <section className="section-pad bg-cream larkspur-world">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+        <Reveal className="support-story">
+          <span className="rounded-full bg-white px-4 py-2 text-sm font-extrabold text-coral shadow-float">Learning Support</span>
+          <h2>Teach Children The Way They Learn</h2>
+          <p>
+            Inspired by child-centered support models, this layer makes our platform more factual for parents: clear pathways, small-batch attention, remedial care, counselling and assessment-informed guidance.
+          </p>
+          <div className="support-callout">
+            <strong>Best for families looking for:</strong>
+            <span>nurturing environment</span>
+            <span>individual attention</span>
+            <span>creative learning</span>
+            <span>secondary and senior secondary support</span>
+          </div>
+          <a href="#contact" className="support-cta">
+            Discuss Your Child&apos;s Learning Needs <ArrowRight className="size-4" aria-hidden />
+          </a>
+        </Reveal>
+        <div className="support-grid">
+          {parentTrustReasons.map(([title, copy, Icon], index) => (
+            <Reveal key={title} delay={index * 0.04} className="trust-reason">
+              <Icon aria-hidden />
+              <strong>{title}</strong>
+              <p>{copy}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+      <div className="mx-auto mt-10 grid max-w-7xl gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {learningPathways.map(([title, level, copy, Icon, points], index) => (
+          <Reveal key={title} delay={index * 0.04} className="pathway-card">
+            <div>
+              <Icon aria-hidden />
+              <span>{level}</span>
+            </div>
+            <h3>{title}</h3>
+            <p>{copy}</p>
+            <ul>
+              {points.map((point) => <li key={point}>{point}</li>)}
+            </ul>
           </Reveal>
         ))}
       </div>
