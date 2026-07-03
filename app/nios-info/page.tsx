@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ArrowRight, CheckCircle2, FileQuestion, HelpCircle, Phone, ShieldCheck, Sparkles } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
@@ -19,26 +20,7 @@ export default function NiosInfoPage() {
       <SmoothScroll />
       <Navbar />
       <main className="nios-info-page">
-        <section className="nios-info-hero">
-          <div className="mx-auto max-w-7xl px-5">
-            <div className="nios-info-hero-grid">
-              <div>
-                <span className="info-eyebrow"><Sparkles className="size-4" aria-hidden /> Parent clarity guide</span>
-                <h1>NIOS Questions Parents Ask First</h1>
-                <p>A simple, friendly guide to OBE, Secondary, Senior Secondary, documents, TMA support, practical readiness and what a learning-support platform can help with.</p>
-                <div className="info-hero-actions">
-                  <a href={siteContact.whatsapp}>Ask on WhatsApp <ArrowRight className="size-4" aria-hidden /></a>
-                  <a href={`tel:${siteContact.phone.replace(/\s/g, "")}`}><Phone className="size-4" aria-hidden /> Call Counselling</a>
-                </div>
-              </div>
-              <div className="info-note">
-                <ShieldCheck aria-hidden />
-                <strong>Important note</strong>
-                <p>NIOS Kids is presented as a learning-support and mentoring platform. Official registration, eligibility, exam rules and certification should always be confirmed from official NIOS sources.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero id="nios-info" eyebrow="Parent clarity guide" eyebrowIcon={<Sparkles className="size-4" aria-hidden />} title="NIOS Questions Parents Ask First" copy="A simple, friendly guide to OBE, Secondary, Senior Secondary, documents, TMA support, practical readiness and what a learning-support platform can help with." primaryAction={{ href: siteContact.whatsapp, label: "Ask on WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call Counselling", icon: <Phone className="size-5" aria-hidden /> }} />
 
         <StorybookChapter
           chapter="Chapter 07 - Parent Compass"

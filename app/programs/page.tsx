@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, CheckCircle2, Rocket } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
@@ -27,17 +28,7 @@ export default function ProgramsPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page programs-page">
-        <section className="trust-hero programs-hero">
-          <div className="mx-auto max-w-7xl">
-            <span className="trust-eyebrow"><Rocket className="size-4" aria-hidden /> Programs</span>
-            <h1>Choose A Learning Path That Fits Your Child</h1>
-            <p>Each program is designed around age, confidence, parent goals and NIOS-aligned academic needs. Dummy details are used for now and can be replaced with exact offerings later.</p>
-            <div className="trust-actions">
-              <Link href="/contact">Get Program Guidance <ArrowRight className="size-4" aria-hidden /></Link>
-              <Link href="/nios-info">Understand NIOS Info</Link>
-            </div>
-          </div>
-        </section>
+        <Hero id="programs" eyebrow="Programs" eyebrowIcon={<Rocket className="size-4" aria-hidden />} title="Choose A Learning Path That Fits Your Child" copy="Each program is designed around age, confidence, parent goals and NIOS-aligned academic needs. Dummy details are used for now and can be replaced with exact offerings later." primaryAction={{ href: "/contact", label: "Get Program Guidance", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/nios-info", label: "Understand NIOS Info" }} />
 
         <StorybookChapter
           chapter="Chapter 02 - Choose Your Island"

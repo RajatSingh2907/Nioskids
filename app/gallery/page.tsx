@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Camera, Images, Palette } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 import { InteractiveGallery } from "@/components/InteractiveGallery";
 import { Navbar } from "@/components/Navbar";
 import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
-import { galleryItems } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Gallery | Learning Moments And Parent Evidence",
@@ -30,37 +27,7 @@ export default function GalleryPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page gallery-page">
-        <section className="trust-hero gallery-page-hero">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div className="gallery-hero-copy">
-              <span className="trust-eyebrow"><Images className="size-4" aria-hidden /> Memory Meadow</span>
-              <h1>Every Learning Moment Becomes A Little Story</h1>
-              <p>Step into a warm evidence wall where reading circles, projects, creative work and parent reviews feel less like records and more like memories children are proud to revisit.</p>
-              <div className="gallery-hero-chips" aria-label="Gallery highlights">
-                <span>Real activity moments</span>
-                <span>Parent-visible proof</span>
-                <span>Joyful learning evidence</span>
-              </div>
-              <div className="trust-actions">
-                <Link href="#gallery-wall">Explore Moments <ArrowRight className="size-4" aria-hidden /></Link>
-                <Link href="/learning-journey">See The Journey</Link>
-              </div>
-            </div>
-            <div className="gallery-hero-stack">
-              <span className="gallery-sparkle gallery-sparkle-one" aria-hidden />
-              <span className="gallery-sparkle gallery-sparkle-two" aria-hidden />
-              <span className="gallery-camera-badge" aria-hidden><Camera className="size-5" /></span>
-              {galleryItems.slice(0, 4).map((item, index) => (
-                <article key={item.title} style={{ "--i": index } as CSSProperties}>
-                  <Image src={item.image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 88vw" />
-                  <span>{item.category}</span>
-                  <h2>{item.title}</h2>
-                  <p>{item.proof}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Hero id="gallery" eyebrow="Memory Meadow" eyebrowIcon={<Images className="size-4" aria-hidden />} title="Every Learning Moment Becomes A Little Story" copy="Step into a warm evidence wall where reading circles, projects, creative work and parent reviews feel less like records and more like memories children are proud to revisit." primaryAction={{ href: "#gallery-wall", label: "Explore Moments", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/learning-journey", label: "See The Journey" }} />
 
         <StorybookChapter
           chapter="Chapter 04 - Memory Meadow"

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
-import Link from "next/link";
 import { ArrowRight, BookOpenCheck, CalendarCheck, Compass, FileCheck2, HeartHandshake, Lightbulb, Sparkles, Star } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
-import { journey } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Learning Journey | From Parent Clarity To Child Confidence",
@@ -73,27 +72,7 @@ export default function LearningJourneyPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page journey-page">
-        <section className="trust-hero journey-page-hero">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div>
-              <span className="trust-eyebrow"><Compass className="size-4" aria-hidden /> Learning Journey</span>
-              <h1>Every Child Needs A Path They Can Believe In</h1>
-              <p>Our journey turns flexible learning into a visible adventure: discover the child, create a plan, learn with joy, review progress and prepare calmly for the next milestone.</p>
-              <div className="trust-actions">
-                <Link href="/contact">Create My Child&apos;s Roadmap <ArrowRight className="size-4" aria-hidden /></Link>
-                <Link href="/programs">Compare Programs</Link>
-              </div>
-            </div>
-            <div className="journey-orbit-card">
-              {journey.map(([title, , Icon], index) => (
-                <span key={title} style={{ "--i": index } as CSSProperties}>
-                  <Icon aria-hidden />
-                  {title}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Hero id="learning-journey" eyebrow="Learning Journey" eyebrowIcon={<Compass className="size-4" aria-hidden />} title="Every Child Needs A Path They Can Believe In" copy="Our journey turns flexible learning into a visible adventure: discover the child, create a plan, learn with joy, review progress and prepare calmly for the next milestone." primaryAction={{ href: "/contact", label: "Create My Child's Roadmap", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/programs", label: "Compare Programs" }} />
 
         <StorybookChapter
           chapter="Chapter 03 - The Learning Map"
