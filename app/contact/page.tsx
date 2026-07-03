@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, CalendarCheck, CheckCircle2, Clock, Mail, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, Mail, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { InteractiveMap } from "@/components/InteractiveMap";
 import { Navbar } from "@/components/Navbar";
+import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { siteContact } from "@/lib/site-data";
 
@@ -51,6 +51,20 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
+
+        <PageEmotionalSections
+          eyebrow="Before you call"
+          title="You do not need perfect clarity before reaching out."
+          copy="Parents often come with half-formed questions: my child avoids writing, we are confused about NIOS, we need structure, we need kindness. That is enough to begin."
+          points={[
+            { title: "Bring the real concern", copy: "Academic, emotional, routine-based or NIOS-related questions are all welcome." },
+            { title: "No pressure script", copy: "The first conversation is for understanding, not forcing a decision." },
+            { title: "Leave with one next step", copy: "Even if you do not join immediately, you should feel clearer than before." }
+          ]}
+          bridgeTitle="The best contact form is the one parents are not afraid to submit."
+          bridgeCopy="So we keep the ask simple: age, contact and what you are worried about. The human conversation can do the rest."
+          bridgeItems={["Worry", "Message", "Listen", "Guide", "Relief"]}
+        />
 
         <section className="trust-section bg-cream">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
@@ -101,12 +115,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="trust-final-cta">
-          <CalendarCheck className="size-12" aria-hidden />
-          <h2>Prefer To Read Before Talking?</h2>
-          <p>Visit the NIOS parent guide first, then come back when you are ready for counselling.</p>
-          <Link href="/nios-info">Read NIOS Parent Info <ArrowRight className="size-4" aria-hidden /></Link>
-        </section>
+        <CuteFinalCTA title="Still Want To Read Before You Talk?" copy="That is completely okay. Start with the parent info guide, then come back when your questions feel ready." href="/nios-info" label="Read The Parent Guide" />
       </main>
       <Footer />
     </>

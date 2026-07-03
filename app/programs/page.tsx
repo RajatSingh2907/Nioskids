@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpen, CheckCircle2, GraduationCap, HeartHandshake, Rocket } from "lucide-react";
+import { ArrowRight, BookOpen, CheckCircle2, Rocket } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { learningPathways, programs } from "@/lib/site-data";
 
@@ -37,6 +38,20 @@ export default function ProgramsPage() {
             </div>
           </div>
         </section>
+
+        <PageEmotionalSections
+          eyebrow="Choosing gently"
+          title="The right program should feel like a good fit, not a forced label."
+          copy="A child may be ahead in curiosity, behind in routine, strong in projects and nervous in writing. Program guidance helps parents choose from the whole child, not one report card."
+          points={[
+            { title: "Stage fit", copy: "We look at age, readiness, confidence and learning goals together." },
+            { title: "Pace fit", copy: "The rhythm can stay flexible while still keeping weekly accountability." },
+            { title: "Interest fit", copy: "Stories, projects, STEM and practice are balanced around what keeps the child engaged." }
+          ]}
+          bridgeTitle="Parents choose better when the path feels human."
+          bridgeCopy="Instead of asking which class sounds impressive, we ask which starting point will help the child show up with less resistance and more belief."
+          bridgeItems={["Age", "Readiness", "Routine", "Interest", "Program"]}
+        />
 
         <section className="trust-section bg-cream">
           <div className="mx-auto max-w-7xl">
@@ -99,12 +114,7 @@ export default function ProgramsPage() {
           </div>
         </section>
 
-        <section className="trust-final-cta">
-          <GraduationCap className="size-12" aria-hidden />
-          <h2>Not Sure Which Program Fits?</h2>
-          <p>A short counselling call can map the child&apos;s current level, parent goals and best starting point.</p>
-          <Link href="/contact">Book Parent Counselling <HeartHandshake className="size-4" aria-hidden /></Link>
-        </section>
+        <CuteFinalCTA title="Let Us Help You Pick The Happiest Starting Point" copy="Bring your child&apos;s age, worries and goals. We will turn the options into one clear, gentle recommendation your family can actually begin with." />
       </main>
       <Footer />
     </>

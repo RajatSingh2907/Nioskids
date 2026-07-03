@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, FileQuestion, HelpCircle, Phone, ShieldCheck,
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { niosInfoCards, niosInfoHighlights, niosInfoSteps, siteContact } from "@/lib/site-data";
 
@@ -38,6 +39,20 @@ export default function NiosInfoPage() {
             </div>
           </div>
         </section>
+
+        <PageEmotionalSections
+          eyebrow="Parent clarity"
+          title="NIOS feels easier when the words stop sounding like a maze."
+          copy="OBE, Secondary, Senior Secondary, TMA and practicals can feel like separate puzzles. This guide connects those pieces into a calmer parent decision."
+          points={[
+            { title: "Know the stage", copy: "Understand whether the question is about foundation, class 10 level or class 12 level support." },
+            { title: "Know the boundary", copy: "Separate official NIOS decisions from learning support and mentoring." },
+            { title: "Know what to ask", copy: "Walk into counselling with better questions and less panic." }
+          ]}
+          bridgeTitle="Information should reduce fear, not create more tabs to open."
+          bridgeCopy="That is why this page keeps the language simple and repeatedly points parents toward official verification where needed."
+          bridgeItems={["OBE", "Secondary", "TMA", "Practical", "Clarity"]}
+        />
 
         <section className="section-pad bg-cream">
           <div className="mx-auto max-w-7xl">
@@ -111,11 +126,7 @@ export default function NiosInfoPage() {
                 </article>
               ))}
             </div>
-            <div className="info-final-cta">
-              <strong>Still unsure which path fits your child?</strong>
-              <p>Use the dummy counselling contact for now. We can replace it later when actual institute details are ready.</p>
-              <a href={siteContact.whatsapp}>Start Parent Counselling <ArrowRight className="size-4" aria-hidden /></a>
-            </div>
+            <CuteFinalCTA title="Still Unsure Which NIOS Path Fits?" copy="Send us the child&apos;s age, current class level and biggest confusion. We will help you frame the next question clearly." href="/contact" label="Ask For Parent Clarity" />
           </div>
         </section>
       </main>

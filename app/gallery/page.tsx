@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import Link from "next/link";
-import { ArrowRight, Camera, CheckCircle2, Images, Palette, Sparkles } from "lucide-react";
+import { ArrowRight, Camera, Images, Palette } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { InteractiveGallery } from "@/components/InteractiveGallery";
 import { Navbar } from "@/components/Navbar";
+import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { galleryItems } from "@/lib/site-data";
 
@@ -51,6 +52,20 @@ export default function GalleryPage() {
           </div>
         </section>
 
+        <PageEmotionalSections
+          eyebrow="Visible joy"
+          title="A gallery should feel like proof that a child is waking up to learning."
+          copy="These moments are not decoration. They are signals: the child tried, expressed, made, explained or smiled while learning something useful."
+          points={[
+            { title: "Parents see effort", copy: "Activities make practice visible in a way marks alone cannot." },
+            { title: "Children feel proud", copy: "A displayed moment turns learning into memory and ownership." },
+            { title: "Mentors see patterns", copy: "Work samples reveal confidence, curiosity and where support is needed next." }
+          ]}
+          bridgeTitle="Every photo should answer: what did the child discover?"
+          bridgeCopy="That question keeps the gallery connected to learning evidence, not just pretty visuals."
+          bridgeItems={["Try", "Make", "Speak", "Smile", "Remember"]}
+        />
+
         <section className="trust-section bg-cream" id="gallery-wall">
           <div className="mx-auto max-w-7xl">
             <div className="trust-section-heading">
@@ -81,12 +96,7 @@ export default function GalleryPage() {
           </div>
         </section>
 
-        <section className="trust-final-cta">
-          <Sparkles className="size-12" aria-hidden />
-          <h2>Want These Moments For Your Child?</h2>
-          <p>Start with counselling and we will suggest the right learning rhythm, activity style and review plan.</p>
-          <Link href="/contact">Start Parent Counselling <CheckCircle2 className="size-4" aria-hidden /></Link>
-        </section>
+        <CuteFinalCTA title="Imagine Your Child Proudly Showing Their Work" copy="We can help you choose activities and learning rhythm that create these small, memorable wins." label="Plan Joyful Learning Moments" />
       </main>
       <Footer />
     </>

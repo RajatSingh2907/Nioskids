@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
-import { ArrowRight, CalendarHeart, Sparkles } from "lucide-react";
+import { ArrowRight, CalendarHeart } from "lucide-react";
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -40,10 +40,7 @@ export function Hero() {
       <motion.div aria-hidden className="floating-book" style={{ x: heroArtX, y: heroArtY }} />
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
         <motion.div style={{ x: textX, y: textY }} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }} className="relative z-10">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/75 px-4 py-2 text-sm font-bold text-ink shadow-float backdrop-blur">
-            <Sparkles className="size-4 text-orange" aria-hidden /> NIOS-aligned learning support for ages 4-16
-          </span>
-          <h1 className="mt-6 max-w-3xl font-heading text-[clamp(3.2rem,9vw,6.9rem)] font-extrabold leading-[0.92] text-ink">
+          <h1 className="max-w-3xl font-heading text-[clamp(3.2rem,9vw,6.9rem)] font-extrabold leading-[0.92] text-ink">
             Flexible NIOS Learning, Made Joyful
           </h1>
           <p className="mt-6 max-w-2xl text-xl leading-8 text-ink/78">

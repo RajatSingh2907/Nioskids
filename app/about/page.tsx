@@ -5,6 +5,7 @@ import { ArrowRight, BookOpenCheck, HeartHandshake, Lightbulb, ShieldCheck, Spar
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { PageEmotionalSections } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
@@ -54,6 +55,20 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <PageEmotionalSections
+          eyebrow="Why this exists"
+          title="Some children only need one thing: learning that finally feels kind."
+          copy="Parents often arrive after trying strict routines, rushed classes or confusing advice. This space is built to slow the noise down and help the child feel capable again."
+          points={[
+            { title: "For the child", copy: "Lessons feel playful enough to enter, but structured enough to create progress." },
+            { title: "For the parent", copy: "You stop guessing what to do next because the learning path becomes visible." },
+            { title: "For the mentor", copy: "Teaching starts with the learner's confidence, not only the syllabus." }
+          ]}
+          bridgeTitle="The real goal is not only marks. It is relief."
+          bridgeCopy="When a child feels understood and a parent feels guided, learning becomes lighter at home. That emotional shift is the foundation of every academic step."
+          bridgeItems={["Confusion", "Listening", "Small wins", "Trust", "Confidence"]}
+        />
 
         <section className="trust-section bg-cream">
           <div className="mx-auto max-w-7xl">

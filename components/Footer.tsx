@@ -17,7 +17,11 @@ export function Footer() {
     <footer className="night-footer px-5 py-14 text-white">
       <div className="footer-cloud footer-cloud-one" aria-hidden />
       <div className="footer-cloud footer-cloud-two" aria-hidden />
+      <div className="footer-cloud footer-cloud-three" aria-hidden />
       <div className="footer-hill" aria-hidden />
+      <div className="footer-sky-stars" aria-hidden>
+        {Array.from({ length: 14 }).map((_, index) => <i key={index} />)}
+      </div>
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
         <div className="footer-world">
           <div className="footer-moon-wrap">
