@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, ClipboardList, FileCheck2, HeartHandshake, Phone, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, CalendarCheck, ClipboardList, FileCheck2, Phone, ShieldCheck } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { admissions, siteContact } from "@/lib/site-data";
 
@@ -41,7 +42,7 @@ export default function AdmissionsPage() {
               <h1>A Calm Start For Parents, A Gentle Start For Children</h1>
               <p>Admission begins with a conversation, not pressure. We understand your child&apos;s learning stage, family goals and support needs before suggesting a program.</p>
               <div className="trust-actions">
-                <Link href="/#contact">Book Counselling <ArrowRight className="size-4" aria-hidden /></Link>
+                <Link href="/contact">Book Counselling <ArrowRight className="size-4" aria-hidden /></Link>
                 <a href={siteContact.whatsapp}>WhatsApp Us</a>
               </div>
             </div>
@@ -54,6 +55,20 @@ export default function AdmissionsPage() {
             </div>
           </div>
         </section>
+
+        <PageEmotionalSections
+          eyebrow="No pressure start"
+          title="Admissions should feel like opening a door, not entering an interview."
+          copy="Families need a calm first step where questions are welcome, documents are explained and the child is not made to feel behind before learning even begins."
+          points={[
+            { title: "A soft first conversation", copy: "We begin with listening to the family story and learning concern." },
+            { title: "A clear next action", copy: "Parents leave knowing whether counselling, program mapping or NIOS info is the right step." },
+            { title: "A child-safe tone", copy: "The process avoids fear-based urgency and keeps the child emotionally protected." }
+          ]}
+          bridgeTitle="The first yes should come from clarity."
+          bridgeCopy="When parents understand the process, children feel less pressure. That is why admission begins with a conversation before commitment."
+          bridgeItems={["Question", "Counselling", "Fit", "Documents", "Start"]}
+        />
 
         <section className="trust-section bg-cream">
           <div className="mx-auto max-w-7xl">
@@ -112,12 +127,7 @@ export default function AdmissionsPage() {
           </div>
         </section>
 
-        <section className="trust-final-cta">
-          <Sparkles className="size-12" aria-hidden />
-          <h2>Ready To Understand The Best Starting Point?</h2>
-          <p>Share the child&apos;s age, current learning situation and parent goals. We will suggest the next step.</p>
-          <Link href="/#contact">Start Parent Counselling <HeartHandshake className="size-4" aria-hidden /></Link>
-        </section>
+        <CuteFinalCTA title="Take The First Step Without The Admission Stress" copy="Tell us where your child is today. We will help you see the next step clearly before you decide anything formal." label="Start A Calm Counselling Chat" />
       </main>
       <Footer />
     </>

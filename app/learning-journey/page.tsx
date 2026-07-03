@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import Link from "next/link";
-import { ArrowRight, BookOpenCheck, CalendarCheck, CheckCircle2, Compass, FileCheck2, HeartHandshake, Lightbulb, Sparkles, Star } from "lucide-react";
+import { ArrowRight, BookOpenCheck, CalendarCheck, Compass, FileCheck2, HeartHandshake, Lightbulb, Sparkles, Star } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { journey } from "@/lib/site-data";
 
@@ -79,7 +80,7 @@ export default function LearningJourneyPage() {
               <h1>Every Child Needs A Path They Can Believe In</h1>
               <p>Our journey turns flexible learning into a visible adventure: discover the child, create a plan, learn with joy, review progress and prepare calmly for the next milestone.</p>
               <div className="trust-actions">
-                <Link href="/#contact">Create My Child&apos;s Roadmap <ArrowRight className="size-4" aria-hidden /></Link>
+                <Link href="/contact">Create My Child&apos;s Roadmap <ArrowRight className="size-4" aria-hidden /></Link>
                 <Link href="/programs">Compare Programs</Link>
               </div>
             </div>
@@ -93,6 +94,20 @@ export default function LearningJourneyPage() {
             </div>
           </div>
         </section>
+
+        <PageEmotionalSections
+          eyebrow="More than steps"
+          title="A journey works when the child can feel progress before the parent demands it."
+          copy="The roadmap is not only a timeline. It is a way to make small effort visible, celebrate consistency and help the child trust their own learning again."
+          points={[
+            { title: "Tiny wins matter", copy: "A completed worksheet, spoken answer or project explanation becomes proof of movement." },
+            { title: "Reviews stay gentle", copy: "Progress updates focus on next support, not blame." },
+            { title: "Confidence compounds", copy: "When the child sees progress, the next milestone feels less scary." }
+          ]}
+          bridgeTitle="The roadmap connects home, mentor and child."
+          bridgeCopy="Parents know what to support, mentors know what to adjust, and the child knows what victory looks like this week."
+          bridgeItems={["Start", "Practice", "Create", "Review", "Achieve"]}
+        />
 
         <section className="trust-section bg-cream">
           <div className="mx-auto max-w-7xl">
@@ -141,12 +156,7 @@ export default function LearningJourneyPage() {
           </div>
         </section>
 
-        <section className="trust-final-cta">
-          <CheckCircle2 className="size-12" aria-hidden />
-          <h2>Ready To Turn Confusion Into A Clear Roadmap?</h2>
-          <p>Start with a counselling call and we will map the child&apos;s current stage, support needs and next milestone.</p>
-          <Link href="/#contact">Book Parent Counselling <ArrowRight className="size-4" aria-hidden /></Link>
-        </section>
+        <CuteFinalCTA title="Let Us Draw Your Child&apos;s Next Little Map" copy="No heavy promises. Just one warm conversation to understand where your child is and what the next doable milestone should be." label="Create A Learning Roadmap" />
       </main>
       <Footer />
     </>

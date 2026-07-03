@@ -54,13 +54,13 @@ export function Navbar() {
               {label}
             </a>
           ))}
-          <a href="/nios-info" className="group flex items-center gap-1 rounded-full px-3 py-2 text-sm font-bold text-ink/80 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-3 focus-visible:outline-sky">
+          <a href="/nios-info" className={`group flex items-center gap-1 rounded-full px-3 py-2 text-sm font-bold transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-3 focus-visible:outline-sky ${pathname === "/nios-info" ? "bg-sun text-ink" : "text-ink/80"}`}>
             <HelpCircle className="size-4 transition group-hover:-translate-y-1 group-hover:rotate-6" aria-hidden />
             NIOS Info
           </a>
         </div>
         <div className="flex items-center gap-2">
-          <a href={pathname === "/" ? "#contact" : "/#contact"} onClick={() => setOpen(false)} className="hidden rounded-full bg-ink px-5 py-3 text-sm font-bold text-white shadow-float transition hover:-translate-y-1 hover:bg-coral focus-visible:outline focus-visible:outline-3 focus-visible:outline-sun sm:inline-flex">
+          <a href="/contact" onClick={() => setOpen(false)} className="hidden rounded-full bg-ink px-5 py-3 text-sm font-bold text-white shadow-float transition hover:-translate-y-1 hover:bg-coral focus-visible:outline focus-visible:outline-3 focus-visible:outline-sun sm:inline-flex">
             Book Counselling
           </a>
           <button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen((value) => !value)} className="grid size-11 place-items-center rounded-full bg-white text-ink shadow-float lg:hidden">
@@ -77,11 +77,11 @@ export function Navbar() {
                 {label}
               </a>
             ))}
-            <a href="/nios-info" onClick={() => setOpen(false)}>
+            <a href="/nios-info" onClick={() => setOpen(false)} className={pathname === "/nios-info" ? "active" : ""}>
               <HelpCircle className="size-5" aria-hidden />
               NIOS Info
             </a>
-            <a href={pathname === "/" ? "#contact" : "/#contact"} onClick={() => setOpen(false)} className="mobile-cta">Book Parent Counselling</a>
+            <a href="/contact" onClick={() => setOpen(false)} className="mobile-cta">Book Parent Counselling</a>
           </motion.div>
         )}
       </AnimatePresence>
