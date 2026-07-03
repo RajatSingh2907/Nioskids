@@ -9,6 +9,8 @@ import { navItems } from "@/lib/site-data";
 const pageRoutes: Record<string, string> = {
   About: "/about",
   Programs: "/programs",
+  Journey: "/learning-journey",
+  Gallery: "/gallery",
   Admissions: "/admissions"
 };
 
