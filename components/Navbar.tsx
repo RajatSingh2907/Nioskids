@@ -6,6 +6,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navItems } from "@/lib/site-data";
 
+const pageRoutes: Record<string, string> = {
+  About: "/about",
+  Programs: "/programs",
+  Admissions: "/admissions"
+};
+
 export function Navbar() {
   const { scrollY } = useScroll();
   const pathname = usePathname();
@@ -28,7 +34,8 @@ export function Navbar() {
     return () => observer.disconnect();
   }, [pathname]);
 
-  const sectionHref = (href: string) => (pathname === "/" ? href : `/${href}`);
+  const navHref = (label: string, href: string) => pageRoutes[label] ?? (pathname === "/" ? href : `/${href}`);
+  const isActive = (label: string, href: string) => (pageRoutes[label] ? pathname === pageRoutes[label] : pathname === "/" && active === href);
 
   return (
     <motion.header style={{ background, boxShadow: shadow }} className="fixed left-1/2 top-4 z-50 w-[min(1120px,calc(100%-24px))] -translate-x-1/2 rounded-[1.8rem] border border-white/70 px-4 py-3 backdrop-blur-xl lg:rounded-full">
@@ -39,7 +46,7 @@ export function Navbar() {
         </a>
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map(([label, href, Icon]) => (
-            <a key={label} href={sectionHref(href)} className={`group flex items-center gap-1 rounded-full px-3 py-2 text-sm font-bold transition focus-visible:outline focus-visible:outline-3 focus-visible:outline-sky ${pathname === "/" && active === href ? "bg-sun text-ink" : "text-ink/80 hover:bg-white hover:text-ink"}`}>
+            <a key={label} href={navHref(label, href)} className={`group flex items-center gap-1 rounded-full px-3 py-2 text-sm font-bold transition focus-visible:outline focus-visible:outline-3 focus-visible:outline-sky ${isActive(label, href) ? "bg-sun text-ink" : "text-ink/80 hover:bg-white hover:text-ink"}`}>
               <Icon className="size-4 transition group-hover:-translate-y-1 group-hover:rotate-6" aria-hidden />
               {label}
             </a>
@@ -50,7 +57,7 @@ export function Navbar() {
           </a>
         </div>
         <div className="flex items-center gap-2">
-          <a href={sectionHref("#contact")} onClick={() => setOpen(false)} className="hidden rounded-full bg-ink px-5 py-3 text-sm font-bold text-white shadow-float transition hover:-translate-y-1 hover:bg-coral focus-visible:outline focus-visible:outline-3 focus-visible:outline-sun sm:inline-flex">
+          <a href={pathname === "/" ? "#contact" : "/#contact"} onClick={() => setOpen(false)} className="hidden rounded-full bg-ink px-5 py-3 text-sm font-bold text-white shadow-float transition hover:-translate-y-1 hover:bg-coral focus-visible:outline focus-visible:outline-3 focus-visible:outline-sun sm:inline-flex">
             Book Counselling
           </a>
           <button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen((value) => !value)} className="grid size-11 place-items-center rounded-full bg-white text-ink shadow-float lg:hidden">
@@ -62,7 +69,7 @@ export function Navbar() {
         {open && (
           <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} className="mobile-menu lg:hidden">
             {navItems.map(([label, href, Icon]) => (
-              <a key={label} href={sectionHref(href)} onClick={() => setOpen(false)} className={pathname === "/" && active === href ? "active" : ""}>
+              <a key={label} href={navHref(label, href)} onClick={() => setOpen(false)} className={isActive(label, href) ? "active" : ""}>
                 <Icon className="size-5" aria-hidden />
                 {label}
               </a>
@@ -71,7 +78,7 @@ export function Navbar() {
               <HelpCircle className="size-5" aria-hidden />
               NIOS Info
             </a>
-            <a href={sectionHref("#contact")} onClick={() => setOpen(false)} className="mobile-cta">Book Parent Counselling</a>
+            <a href={pathname === "/" ? "#contact" : "/#contact"} onClick={() => setOpen(false)} className="mobile-cta">Book Parent Counselling</a>
           </motion.div>
         )}
       </AnimatePresence>
