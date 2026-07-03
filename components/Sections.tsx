@@ -97,26 +97,27 @@ export function FeaturesSection() {
 export function LearningSupportSection() {
   return (
     <section className="section-pad bg-cream larkspur-world">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+      <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
         <Reveal className="support-story">
           <span className="rounded-full bg-white px-4 py-2 text-sm font-extrabold text-coral shadow-float">Learning Support</span>
-          <h2>Teach Children The Way They Learn</h2>
+          <h2>Support That Fits Each Child</h2>
           <p>
-            Inspired by child-centered support models, this layer makes our platform more factual for parents: clear pathways, small-batch attention, remedial care, counselling and assessment-informed guidance.
+            Clear pathways, small batches, remedial care and parent guidance help children learn with less pressure and more confidence.
           </p>
           <div className="support-callout">
-            <strong>Best for families looking for:</strong>
-            <span>nurturing environment</span>
+            <strong>Best for families looking for</strong>
+            <span>nurturing support</span>
             <span>individual attention</span>
             <span>creative learning</span>
-            <span>secondary and senior secondary support</span>
           </div>
-          <a href="#contact" className="support-cta">
-            Discuss Your Child&apos;s Learning Needs <ArrowRight className="size-4" aria-hidden />
-          </a>
-          <a href="/nios-info" className="support-secondary-cta">
-            Read NIOS Parent Info <ArrowRight className="size-4" aria-hidden />
-          </a>
+          <div className="support-actions">
+            <a href="#contact" className="support-cta">
+              Discuss Learning Needs <ArrowRight className="size-4" aria-hidden />
+            </a>
+            <a href="/nios-info" className="support-secondary-cta">
+              Read NIOS Parent Info <ArrowRight className="size-4" aria-hidden />
+            </a>
+          </div>
         </Reveal>
         <div className="support-grid">
           {parentTrustReasons.map(([title, copy, Icon], index) => (
