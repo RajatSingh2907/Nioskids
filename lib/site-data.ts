@@ -209,6 +209,8 @@ export const galleryItems = [
     category: "Reading",
     caption: "Guided reading, speaking prompts and vocabulary games.",
     color: "from-sky/55 to-mint/50",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Children reading and learning together in a warm classroom setting",
     age: "Ages 6-9",
     proof: "Reading fluency",
     outcome: "Children practice expression, recall and vocabulary through guided story prompts."
@@ -218,6 +220,8 @@ export const galleryItems = [
     category: "Science",
     caption: "Observation-led activities that make concepts visible.",
     color: "from-sun/60 to-coral/45",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Students working with a teacher during a hands-on classroom activity",
     age: "Ages 9-13",
     proof: "Concept clarity",
     outcome: "Learners observe, record and explain simple experiments in their own words."
@@ -227,6 +231,8 @@ export const galleryItems = [
     category: "Creative",
     caption: "Creative expression connected to language and confidence.",
     color: "from-coral/45 to-grape/40",
+    image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Children creating artwork and learning through play",
     age: "Ages 4-10",
     proof: "Creative confidence",
     outcome: "Art tasks become speaking, storytelling and fine-motor confidence builders."
@@ -236,6 +242,8 @@ export const galleryItems = [
     category: "Projects",
     caption: "Children explain, build and present what they learned.",
     color: "from-mint/55 to-sky/45",
+    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Children collaborating on classroom learning work",
     age: "Ages 8-16",
     proof: "Presentation skill",
     outcome: "Project demos help parents see understanding, effort and independent thinking."
@@ -245,6 +253,8 @@ export const galleryItems = [
     category: "STEM",
     caption: "Logic games and early coding patterns for future skills.",
     color: "from-grape/45 to-sky/50",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Child using a laptop for guided digital learning",
     age: "Ages 10-16",
     proof: "Problem solving",
     outcome: "Puzzle-based coding builds sequencing, debugging and patient thinking."
@@ -254,6 +264,8 @@ export const galleryItems = [
     category: "Parents",
     caption: "Progress conversations that make next steps clear.",
     color: "from-orange/45 to-sun/55",
+    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Teacher and family discussing progress in a classroom environment",
     age: "Parents",
     proof: "Progress clarity",
     outcome: "Families get a simple picture of current progress, gaps and next actions."

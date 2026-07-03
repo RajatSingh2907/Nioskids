@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Camera, Images, Palette } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { InteractiveGallery } from "@/components/InteractiveGallery";
 import { Navbar } from "@/components/Navbar";
-import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
+import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { galleryItems } from "@/lib/site-data";
 
@@ -31,18 +32,27 @@ export default function GalleryPage() {
       <main className="trust-page gallery-page">
         <section className="trust-hero gallery-page-hero">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div>
-              <span className="trust-eyebrow"><Images className="size-4" aria-hidden /> Gallery</span>
-              <h1>See Learning In Action, Not Just In Words</h1>
-              <p>Parents need proof that learning is happening. Children need moments they feel proud of. This gallery is designed as a playful evidence wall for activities, projects, reviews and confidence-building work.</p>
+            <div className="gallery-hero-copy">
+              <span className="trust-eyebrow"><Images className="size-4" aria-hidden /> Memory Meadow</span>
+              <h1>Every Learning Moment Becomes A Little Story</h1>
+              <p>Step into a warm evidence wall where reading circles, projects, creative work and parent reviews feel less like records and more like memories children are proud to revisit.</p>
+              <div className="gallery-hero-chips" aria-label="Gallery highlights">
+                <span>Real activity moments</span>
+                <span>Parent-visible proof</span>
+                <span>Joyful learning evidence</span>
+              </div>
               <div className="trust-actions">
                 <Link href="#gallery-wall">Explore Moments <ArrowRight className="size-4" aria-hidden /></Link>
                 <Link href="/learning-journey">See The Journey</Link>
               </div>
             </div>
             <div className="gallery-hero-stack">
+              <span className="gallery-sparkle gallery-sparkle-one" aria-hidden />
+              <span className="gallery-sparkle gallery-sparkle-two" aria-hidden />
+              <span className="gallery-camera-badge" aria-hidden><Camera className="size-5" /></span>
               {galleryItems.slice(0, 4).map((item, index) => (
                 <article key={item.title} style={{ "--i": index } as CSSProperties}>
+                  <Image src={item.image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 88vw" />
                   <span>{item.category}</span>
                   <h2>{item.title}</h2>
                   <p>{item.proof}</p>
@@ -51,6 +61,15 @@ export default function GalleryPage() {
             </div>
           </div>
         </section>
+
+        <StorybookChapter
+          chapter="Chapter 04 - Memory Meadow"
+          title="The Place Where Learning Leaves Little Souvenirs"
+          copy="This chapter makes learning visible through projects, reading circles, experiments and moments children can feel proud to show."
+          trust="Parents see evidence of effort, expression and progress."
+          path={["Try", "Make", "Show", "Celebrate", "Remember"]}
+          tone="coral"
+        />
 
         <PageEmotionalSections
           eyebrow="Visible joy"

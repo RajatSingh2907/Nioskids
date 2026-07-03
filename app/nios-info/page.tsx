@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, FileQuestion, HelpCircle, Phone, ShieldCheck,
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
+import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { niosInfoCards, niosInfoHighlights, niosInfoSteps, siteContact } from "@/lib/site-data";
 
@@ -39,6 +39,15 @@ export default function NiosInfoPage() {
             </div>
           </div>
         </section>
+
+        <StorybookChapter
+          chapter="Chapter 07 - Parent Compass"
+          title="A Calm Compass For NIOS Words, Stages And Boundaries"
+          copy="This chapter helps parents separate official NIOS rules from learning support, so counselling starts with clarity instead of panic."
+          trust="Parents see what we can support and what must be verified officially."
+          path={["OBE", "Secondary", "TMA", "Practical", "Verify"]}
+          tone="mint"
+        />
 
         <PageEmotionalSections
           eyebrow="Parent clarity"

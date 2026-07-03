@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Camera, CheckCircle2, Sparkles, X } from "lucide-react";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { galleryItems } from "@/lib/site-data";
 
@@ -30,6 +31,7 @@ export function InteractiveGallery() {
         </div>
         <div className="gallery-feature">
           <div className={`gallery-feature-art bg-gradient-to-br ${featured.color}`}>
+            <Image src={featured.image} alt={featured.imageAlt} fill sizes="(min-width: 1024px) 420px, 100vw" />
             <GalleryScene category={featured.category} />
           </div>
           <div>
@@ -47,6 +49,7 @@ export function InteractiveGallery() {
           {visibleItems.map((item, index) => (
             <motion.button layout initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.92 }} key={item.title} type="button" className="polaroid gallery-card" style={{ transform: `rotate(${rotations[index % rotations.length]}deg)` }} onClick={() => setSelected(item)}>
               <div className={`polaroid-art bg-gradient-to-br ${item.color}`}>
+                <Image src={item.image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" />
                 <GalleryScene category={item.category} />
                 <span>{item.category}</span>
               </div>
@@ -62,6 +65,7 @@ export function InteractiveGallery() {
             <motion.div initial={{ y: 24, scale: 0.96 }} animate={{ y: 0, scale: 1 }} exit={{ y: 24, scale: 0.96 }} onClick={(event) => event.stopPropagation()}>
               <button type="button" aria-label="Close gallery preview" onClick={() => setSelected(null)}><X aria-hidden /></button>
               <div className={`modal-art bg-gradient-to-br ${selected.color}`}>
+                <Image src={selected.image} alt={selected.imageAlt} fill sizes="min(34rem, 100vw)" />
                 <GalleryScene category={selected.category} />
               </div>
               <h3>{selected.title}</h3>
