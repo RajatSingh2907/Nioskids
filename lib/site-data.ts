@@ -15,6 +15,7 @@ import {
   MapPin,
   Mic2,
   Palette,
+  Puzzle,
   Rocket,
   ShieldCheck,
   Sparkles,
@@ -89,6 +90,58 @@ export const programs = [
     outcomes: ["Subject selection guidance", "Exam-readiness checkpoints", "Study habits and portfolio skills"],
     parentFit: "Best for families choosing flexible schooling with serious academic goals."
   }
+];
+
+export const learningPathways: [string, string, string, LucideIcon, string[]][] = [
+  [
+    "OBE - Open Basic Education",
+    "Std. III to VIII",
+    "A bridge program for children who need foundational learning, flexible pacing and confidence before higher academic stages.",
+    BookOpen,
+    ["Foundational literacy and numeracy", "Activity-led concept building", "Readiness for secondary learning"]
+  ],
+  [
+    "Secondary Support",
+    "Std. IX to X",
+    "Structured support for learners preparing for secondary-level academic expectations through NIOS-aligned planning.",
+    GraduationCap,
+    ["Subject planning guidance", "Regular practice rhythm", "TMA and exam preparation awareness"]
+  ],
+  [
+    "Senior Secondary Support",
+    "Std. XI to XII",
+    "Guidance for older learners who need clarity, mentoring and steady academic planning for senior secondary goals.",
+    FileCheck2,
+    ["Stream and subject clarity", "Revision and assessment checkpoints", "Future pathway counselling"]
+  ],
+  [
+    "Remedial & Counselling",
+    "Learning support",
+    "Personalized help for children who need additional attention, emotional comfort or alternative learning methods.",
+    HeartHandshake,
+    ["One-on-one support", "Small-batch learning", "Confidence and habit building"]
+  ],
+  [
+    "Psychological & Educational Assessment",
+    "Parent clarity",
+    "Assessment-informed guidance to understand how a child learns and what kind of support may help.",
+    Brain,
+    ["Learning profile discussion", "Strength and need mapping", "Parent guidance conversation"]
+  ],
+  [
+    "Parent & Teacher Workshops",
+    "Support ecosystem",
+    "Workshops that help adults understand learning differences, child-friendly teaching and practical home support.",
+    UsersRound,
+    ["Learning difficulty awareness", "Hands-on teaching strategies", "Home support routines"]
+  ]
+];
+
+export const parentTrustReasons: [string, string, LucideIcon][] = [
+  ["Child-Friendly Curriculum", "Lessons are mapped around the child's current level, pace and emotional comfort.", Puzzle],
+  ["Small Batches", "Children receive individual attention without the pressure of a crowded classroom.", UsersRound],
+  ["Sensitised Mentors", "Educators use patient, creative methods for diverse learning needs.", HeartHandshake],
+  ["Holistic Development", "Language, cognition, sensory-motor, personality and social confidence are considered together.", Sparkles]
 ];
 
 export const activities: [string, LucideIcon][] = [
