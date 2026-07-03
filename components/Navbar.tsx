@@ -41,10 +41,10 @@ export function Navbar() {
   const isActive = (label: string, href: string) => (pageRoutes[label] ? pathname === pageRoutes[label] : pathname === "/" && active === href);
 
   return (
-    <motion.header style={{ background, boxShadow: shadow }} className="fixed left-1/2 top-3 z-50 w-[min(1120px,calc(100%-24px))] -translate-x-1/2 rounded-[1.4rem] border border-white/70 px-3 py-2 backdrop-blur-xl lg:rounded-full">
+    <motion.header style={{ background, boxShadow: shadow }} className="fixed left-1/2 top-3 z-50 w-[min(1120px,calc(100%-24px))] -translate-x-1/2 rounded-[1.25rem] border border-white/70 px-3 py-1.5 backdrop-blur-xl lg:rounded-full">
       <nav className="flex items-center justify-between gap-4" aria-label="Main navigation">
         <a href={pathname === "/" ? "#home" : "/"} onClick={() => setOpen(false)} className="flex items-center gap-2 rounded-full text-ink focus-visible:outline focus-visible:outline-3 focus-visible:outline-coral">
-          <span className="grid size-9 place-items-center rounded-full bg-sun shadow-glow"><BookOpenCheck aria-hidden /></span>
+          <span className="grid size-8 place-items-center rounded-full bg-sun shadow-glow"><BookOpenCheck className="size-5" aria-hidden /></span>
           <span className="font-heading text-lg font-bold leading-tight">NIOS Kids</span>
         </a>
         <div className="hidden items-center gap-1 lg:flex">
@@ -60,7 +60,7 @@ export function Navbar() {
           </a>
         </div>
         <div className="flex items-center gap-2">
-          <a href="/contact" onClick={() => setOpen(false)} className="hidden rounded-full bg-ink px-4 py-2.5 text-sm font-bold text-white shadow-float transition hover:-translate-y-1 hover:bg-coral focus-visible:outline focus-visible:outline-3 focus-visible:outline-sun sm:inline-flex">
+          <a href="/contact" onClick={() => setOpen(false)} className="hidden rounded-full bg-ink px-4 py-2 text-sm font-bold text-white shadow-float transition hover:-translate-y-1 hover:bg-coral focus-visible:outline focus-visible:outline-3 focus-visible:outline-sun sm:inline-flex">
             Book Counselling
           </a>
           <button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen((value) => !value)} className="grid size-10 place-items-center rounded-full bg-white text-ink shadow-float lg:hidden">
