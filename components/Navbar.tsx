@@ -11,7 +11,8 @@ const pageRoutes: Record<string, string> = {
   Programs: "/programs",
   Journey: "/learning-journey",
   Gallery: "/gallery",
-  Admissions: "/admissions"
+  Admissions: "/admissions",
+  Contact: "/contact"
 };
 
 export function Navbar() {
