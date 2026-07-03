@@ -1,0 +1,45 @@
+"use client";
+
+import { Send, Sparkles } from "lucide-react";
+import { useState } from "react";
+
+type FormState = {
+  name: string;
+  phone: string;
+  age: string;
+  message: string;
+};
+
+const initialState: FormState = { name: "", phone: "", age: "", message: "" };
+
+export function ContactForm() {
+  const [form, setForm] = useState(initialState);
+  const [status, setStatus] = useState<"idle" | "error" | "success">("idle");
+
+  function updateField(field: keyof FormState, value: string) {
+    setForm((current) => ({ ...current, [field]: value }));
+    setStatus("idle");
+  }
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!form.name.trim() || !form.phone.trim() || !form.age.trim()) {
+      setStatus("error");
+      return;
+    }
+    setStatus("success");
+    setForm(initialState);
+  }
+
+  return (
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <input aria-label="Parent name" placeholder="Parent name" value={form.name} onChange={(event) => updateField("name", event.target.value)} />
+      <input aria-label="Phone number" placeholder="Phone number" value={form.phone} onChange={(event) => updateField("phone", event.target.value)} />
+      <input aria-label="Child age" placeholder="Child age" value={form.age} onChange={(event) => updateField("age", event.target.value)} />
+      <textarea aria-label="Message" placeholder="Tell us about your child's learning needs" rows={5} value={form.message} onChange={(event) => updateField("message", event.target.value)} />
+      <button type="submit">Request Counselling <Send className="size-5" aria-hidden /></button>
+      {status === "error" && <p className="form-status error">Please add parent name, phone number and child age.</p>}
+      {status === "success" && <p className="form-status success"><Sparkles className="size-4" aria-hidden /> Enquiry saved locally. We will connect this to email/CRM in the production pass.</p>}
+    </form>
+  );
+}
