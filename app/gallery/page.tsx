@@ -85,7 +85,7 @@ export default function GalleryPage() {
           <Sparkles className="size-12" aria-hidden />
           <h2>Want These Moments For Your Child?</h2>
           <p>Start with counselling and we will suggest the right learning rhythm, activity style and review plan.</p>
-          <Link href="/#contact">Start Parent Counselling <CheckCircle2 className="size-4" aria-hidden /></Link>
+          <Link href="/contact">Start Parent Counselling <CheckCircle2 className="size-4" aria-hidden /></Link>
         </section>
       </main>
       <Footer />

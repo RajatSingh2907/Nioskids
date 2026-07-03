@@ -32,7 +32,7 @@ export default function ProgramsPage() {
             <h1>Choose A Learning Path That Fits Your Child</h1>
             <p>Each program is designed around age, confidence, parent goals and NIOS-aligned academic needs. Dummy details are used for now and can be replaced with exact offerings later.</p>
             <div className="trust-actions">
-              <Link href="/#contact">Get Program Guidance <ArrowRight className="size-4" aria-hidden /></Link>
+              <Link href="/contact">Get Program Guidance <ArrowRight className="size-4" aria-hidden /></Link>
               <Link href="/nios-info">Understand NIOS Info</Link>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function ProgramsPage() {
                     ))}
                   </ul>
                   <strong>{program.parentFit}</strong>
-                  <Link href="/#contact">Discuss this program <ArrowRight className="size-4" aria-hidden /></Link>
+                  <Link href="/contact">Discuss this program <ArrowRight className="size-4" aria-hidden /></Link>
                 </article>
               ))}
             </div>
@@ -103,7 +103,7 @@ export default function ProgramsPage() {
           <GraduationCap className="size-12" aria-hidden />
           <h2>Not Sure Which Program Fits?</h2>
           <p>A short counselling call can map the child&apos;s current level, parent goals and best starting point.</p>
-          <Link href="/#contact">Book Parent Counselling <HeartHandshake className="size-4" aria-hidden /></Link>
+          <Link href="/contact">Book Parent Counselling <HeartHandshake className="size-4" aria-hidden /></Link>
         </section>
       </main>
       <Footer />

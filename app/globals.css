@@ -2131,6 +2131,23 @@ textarea {
   animation: doodle-drift 18s linear infinite;
 }
 
+.trust-hero::after,
+.nios-info-hero::after {
+  content: "";
+  position: absolute;
+  right: clamp(1rem, 5vw, 5rem);
+  bottom: clamp(1rem, 5svh, 3.5rem);
+  width: clamp(8rem, 18vw, 16rem);
+  height: clamp(8rem, 18vw, 16rem);
+  border: 1.3rem solid rgba(255, 217, 61, 0.34);
+  border-left-color: rgba(92, 200, 255, 0.34);
+  border-bottom-color: rgba(255, 107, 107, 0.24);
+  border-radius: 50%;
+  pointer-events: none;
+  rotate: -18deg;
+  animation: soft-pop 1.2s ease both, orbit-spin 22s linear infinite;
+}
+
 .programs-hero {
   background:
     radial-gradient(circle at 12% 18%, rgba(255, 107, 107, 0.26), transparent 18rem),
@@ -3016,5 +3033,253 @@ textarea {
 
   .gallery-hero-stack article {
     width: 88%;
+  }
+}
+
+/* Phase 4 global polish: compact heroes, soft footer world, page transitions, and responsive QA. */
+.page-transition {
+  min-height: 100vh;
+}
+
+.hero-sky {
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  padding-top: clamp(6.5rem, 10svh, 8.2rem) !important;
+  padding-bottom: clamp(4.5rem, 8svh, 6rem) !important;
+}
+
+.trust-hero,
+.nios-info-hero {
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  padding-top: clamp(6.4rem, 10svh, 8rem);
+  padding-bottom: clamp(2.6rem, 6svh, 4.2rem);
+}
+
+.trust-hero h1,
+.nios-info-hero h1 {
+  font-size: clamp(2.8rem, 6.4vw, 6rem);
+}
+
+.trust-hero p,
+.nios-info-hero p {
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  line-height: 1.62;
+}
+
+.trust-actions,
+.info-hero-actions {
+  margin-top: 1.25rem;
+}
+
+.about-story-card,
+.admission-help-card,
+.journey-orbit-card,
+.gallery-hero-stack,
+.contact-page-panel {
+  max-height: min(34rem, 54svh);
+}
+
+.journey-orbit-card {
+  min-height: min(28rem, 54svh);
+}
+
+.gallery-hero-stack {
+  min-height: min(30rem, 55svh);
+}
+
+.footer-world p {
+  margin-top: 1rem;
+  max-width: 38rem;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.footer-moon-wrap {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.footer-mini-cloud {
+  position: absolute;
+  right: -1.2rem;
+  bottom: -0.4rem;
+  color: rgba(255, 255, 255, 0.78);
+  animation: cloud-breathe 8s ease-in-out infinite;
+}
+
+.footer-cta-row {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-cta-row a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font-weight: 900;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.footer-cta-row a:first-child {
+  background: #ffd93d;
+  color: #31405f;
+}
+
+.footer-cta-row a:last-child {
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+}
+
+.footer-cta-row a:hover {
+  transform: translateY(-3px);
+}
+
+.footer-panel {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.3rem;
+  backdrop-filter: blur(14px);
+}
+
+.footer-panel nav {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.footer-panel nav a,
+.footer-contact a {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.55rem 0.75rem;
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 900;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.footer-panel nav a:hover,
+.footer-contact a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.footer-contact {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.footer-contact a {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.footer-stars {
+  position: absolute;
+  right: 6%;
+  top: 18%;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-cloud {
+  position: absolute;
+  width: 10rem;
+  height: 3.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  filter: blur(0.2px);
+}
+
+.footer-cloud::before,
+.footer-cloud::after {
+  content: "";
+  position: absolute;
+  bottom: 0.7rem;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.footer-cloud::before {
+  left: 1.2rem;
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.footer-cloud::after {
+  right: 1.4rem;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.footer-cloud-one {
+  left: 8%;
+  top: 18%;
+  animation: cloud-breathe 9s ease-in-out infinite;
+}
+
+.footer-cloud-two {
+  right: 10%;
+  top: 42%;
+  scale: 0.72;
+  animation: cloud-breathe 11s ease-in-out infinite reverse;
+}
+
+.footer-hill {
+  position: absolute;
+  inset-inline: -5%;
+  bottom: -2rem;
+  height: 7rem;
+  border-radius: 50% 50% 0 0;
+  background: rgba(126, 217, 87, 0.18);
+}
+
+@media (min-width: 1024px) {
+  .trust-hero > div,
+  .nios-info-hero-grid {
+    transform: translateY(0.35rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-sky,
+  .trust-hero,
+  .nios-info-hero {
+    min-height: auto;
+    padding-top: 7rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .trust-hero h1,
+  .nios-info-hero h1 {
+    font-size: clamp(2.65rem, 13vw, 4.4rem);
+  }
+
+  .about-story-card,
+  .admission-help-card,
+  .journey-orbit-card,
+  .gallery-hero-stack,
+  .contact-page-panel {
+    max-height: none;
+  }
+
+  .footer-stars {
+    position: static;
+    margin-top: 1rem;
   }
 }

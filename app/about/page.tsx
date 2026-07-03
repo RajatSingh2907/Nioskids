@@ -43,7 +43,7 @@ export default function AboutPage() {
               </p>
               <div className="trust-actions">
                 <Link href="/programs">Explore Programs <ArrowRight className="size-4" aria-hidden /></Link>
-                <Link href="/#contact">Talk To A Counsellor</Link>
+                <Link href="/contact">Talk To A Counsellor</Link>
               </div>
             </div>
             <div className="about-story-card">

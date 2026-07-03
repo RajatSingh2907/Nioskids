@@ -79,7 +79,7 @@ export default function LearningJourneyPage() {
               <h1>Every Child Needs A Path They Can Believe In</h1>
               <p>Our journey turns flexible learning into a visible adventure: discover the child, create a plan, learn with joy, review progress and prepare calmly for the next milestone.</p>
               <div className="trust-actions">
-                <Link href="/#contact">Create My Child&apos;s Roadmap <ArrowRight className="size-4" aria-hidden /></Link>
+                <Link href="/contact">Create My Child&apos;s Roadmap <ArrowRight className="size-4" aria-hidden /></Link>
                 <Link href="/programs">Compare Programs</Link>
               </div>
             </div>
@@ -145,7 +145,7 @@ export default function LearningJourneyPage() {
           <CheckCircle2 className="size-12" aria-hidden />
           <h2>Ready To Turn Confusion Into A Clear Roadmap?</h2>
           <p>Start with a counselling call and we will map the child&apos;s current stage, support needs and next milestone.</p>
-          <Link href="/#contact">Book Parent Counselling <ArrowRight className="size-4" aria-hidden /></Link>
+          <Link href="/contact">Book Parent Counselling <ArrowRight className="size-4" aria-hidden /></Link>
         </section>
       </main>
       <Footer />

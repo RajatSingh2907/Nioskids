@@ -50,10 +50,10 @@ export function Hero() {
             A colorful learning world where children build confidence through stories, projects and practice, while parents get clear guidance for flexible NIOS-aligned learning.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a className="magic-button bg-coral text-white" href="#programs">
+            <a className="magic-button bg-coral text-white" href="/programs">
               Find Your Program <ArrowRight className="size-5" aria-hidden />
             </a>
-            <a className="magic-button bg-white text-ink" href="#contact">
+            <a className="magic-button bg-white text-ink" href="/contact">
               Book Parent Counselling <CalendarHeart className="size-5" aria-hidden />
             </a>
           </div>

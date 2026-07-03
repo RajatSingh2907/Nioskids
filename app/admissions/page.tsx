@@ -41,7 +41,7 @@ export default function AdmissionsPage() {
               <h1>A Calm Start For Parents, A Gentle Start For Children</h1>
               <p>Admission begins with a conversation, not pressure. We understand your child&apos;s learning stage, family goals and support needs before suggesting a program.</p>
               <div className="trust-actions">
-                <Link href="/#contact">Book Counselling <ArrowRight className="size-4" aria-hidden /></Link>
+                <Link href="/contact">Book Counselling <ArrowRight className="size-4" aria-hidden /></Link>
                 <a href={siteContact.whatsapp}>WhatsApp Us</a>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function AdmissionsPage() {
           <Sparkles className="size-12" aria-hidden />
           <h2>Ready To Understand The Best Starting Point?</h2>
           <p>Share the child&apos;s age, current learning situation and parent goals. We will suggest the next step.</p>
-          <Link href="/#contact">Start Parent Counselling <HeartHandshake className="size-4" aria-hidden /></Link>
+          <Link href="/contact">Start Parent Counselling <HeartHandshake className="size-4" aria-hidden /></Link>
         </section>
       </main>
       <Footer />
