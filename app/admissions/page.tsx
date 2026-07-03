@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, CalendarCheck, ClipboardList, FileCheck2, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, CalendarCheck, ClipboardList, FileCheck2, ShieldCheck } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
@@ -35,26 +35,15 @@ export default function AdmissionsPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page admissions-page">
-        <section className="trust-hero admissions-hero">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-            <div>
-              <span className="trust-eyebrow"><CalendarCheck className="size-4" aria-hidden /> Admissions</span>
-              <h1>A Calm Start For Parents, A Gentle Start For Children</h1>
-              <p>Admission begins with a conversation, not pressure. We understand your child&apos;s learning stage, family goals and support needs before suggesting a program.</p>
-              <div className="trust-actions">
-                <Link href="/contact">Book Counselling <ArrowRight className="size-4" aria-hidden /></Link>
-                <a href={siteContact.whatsapp}>WhatsApp Us</a>
-              </div>
-            </div>
-            <div className="admission-help-card">
-              <Phone className="size-12 text-coral" aria-hidden />
-              <h2>Dummy Counselling Desk</h2>
-              <p>{siteContact.phone}</p>
-              <p>{siteContact.hours}</p>
-              <span>Real centre details can replace this anytime.</span>
-            </div>
-          </div>
-        </section>
+        <Hero
+          id="admissions"
+          eyebrow="Admissions"
+          eyebrowIcon={<CalendarCheck className="size-4" aria-hidden />}
+          title="A Calm Start For Parents, A Gentle Start For Children"
+          copy="Admission begins with a conversation, not pressure. We understand your child's learning stage, family goals and support needs before suggesting a program."
+          primaryAction={{ href: "/contact", label: "Book Counselling", icon: <ArrowRight className="size-5" aria-hidden /> }}
+          secondaryAction={{ href: siteContact.whatsapp, label: "WhatsApp Us" }}
+        />
 
         <StorybookChapter
           chapter="Chapter 05 - The Welcome Gate"

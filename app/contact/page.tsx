@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, Clock, Mail, MapPin, MessageCircle, Phone, Sp
 import { ContactForm } from "@/components/ContactForm";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 import { InteractiveMap } from "@/components/InteractiveMap";
 import { Navbar } from "@/components/Navbar";
 import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
@@ -35,22 +36,15 @@ export default function ContactPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page contact-page">
-        <section className="trust-hero contact-page-hero">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div>
-              <span className="trust-eyebrow"><MessageCircle className="size-4" aria-hidden /> Contact</span>
-              <h1>Start With A Parent Counselling Conversation</h1>
-              <p>Share your child&apos;s age, current learning situation and NIOS goals. We will help you understand the best next step with dummy contact details for now.</p>
-              <div className="trust-actions">
-                <a href={siteContact.whatsapp}>Message On WhatsApp <ArrowRight className="size-4" aria-hidden /></a>
-                <a href={`tel:${siteContact.phone.replace(/\s/g, "")}`}>Call Counselling</a>
-              </div>
-            </div>
-            <div className="contact-page-panel">
-              <ContactForm />
-            </div>
-          </div>
-        </section>
+        <Hero
+          id="contact"
+          eyebrow="Contact"
+          eyebrowIcon={<MessageCircle className="size-4" aria-hidden />}
+          title="Start With A Parent Counselling Conversation"
+          copy="Share your child's age, current learning situation and NIOS goals. We will help you understand the best next step with dummy contact details for now."
+          primaryAction={{ href: siteContact.whatsapp, label: "Message On WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }}
+          secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call Counselling" }}
+        />
 
         <StorybookChapter
           chapter="Chapter 06 - Counselling Camp"
@@ -74,6 +68,12 @@ export default function ContactPage() {
           bridgeCopy="So we keep the ask simple: age, contact and what you are worried about. The human conversation can do the rest."
           bridgeItems={["Worry", "Message", "Listen", "Guide", "Relief"]}
         />
+
+        <section className="trust-section bg-[#EEF8FF]">
+          <div className="contact-page-panel mx-auto max-w-3xl">
+            <ContactForm />
+          </div>
+        </section>
 
         <section className="trust-section bg-cream">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">

@@ -3252,6 +3252,25 @@ textarea {
   letter-spacing: 0;
 }
 
+.hero-eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0.58rem 0.85rem;
+  color: #31405f;
+  font-weight: 900;
+  box-shadow: 0 12px 26px rgba(49, 64, 95, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.hero-eyebrow svg {
+  color: #ff6b6b;
+}
+
 .hero-copy {
   font-size: clamp(1.02rem, 1.25vw, 1.16rem);
   line-height: 1.52;

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
-import { ArrowRight, BookOpenCheck, HeartHandshake, Lightbulb, ShieldCheck, Sparkles, UsersRound } from "lucide-react";
+import { ArrowRight, BookOpenCheck, HeartHandshake, Lightbulb, ShieldCheck, Sparkles } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
@@ -34,27 +34,15 @@ export default function AboutPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page about-page">
-        <section className="trust-hero about-hero">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div>
-              <span className="trust-eyebrow"><Sparkles className="size-4" aria-hidden /> About NIOS Kids</span>
-              <h1>Flexible Learning Should Feel Clear, Kind And Joyful</h1>
-              <p>
-                NIOS Kids is built for families who want child-friendly learning support without losing structure. We combine creative lessons, mentoring and parent guidance so flexible education feels confident instead of confusing.
-              </p>
-              <div className="trust-actions">
-                <Link href="/programs">Explore Programs <ArrowRight className="size-4" aria-hidden /></Link>
-                <Link href="/contact">Talk To A Counsellor</Link>
-              </div>
-            </div>
-            <div className="about-story-card">
-              <span className="story-spark" aria-hidden />
-              <UsersRound className="size-14 text-coral" aria-hidden />
-              <h2>For children, it feels like discovery. For parents, it feels like a plan.</h2>
-              <p>Every learner gets a rhythm that respects their age, confidence and academic goals.</p>
-            </div>
-          </div>
-        </section>
+        <Hero
+          id="about"
+          eyebrow="About NIOS Kids"
+          eyebrowIcon={<Sparkles className="size-4" aria-hidden />}
+          title="Flexible Learning Should Feel Clear, Kind And Joyful"
+          copy="NIOS Kids is built for families who want child-friendly learning support without losing structure. We combine creative lessons, mentoring and parent guidance so flexible education feels confident instead of confusing."
+          primaryAction={{ href: "/programs", label: "Explore Programs", icon: <ArrowRight className="size-5" aria-hidden /> }}
+          secondaryAction={{ href: "/contact", label: "Talk To A Counsellor" }}
+        />
 
         <StorybookChapter
           chapter="Chapter 01 - The Beginning"
