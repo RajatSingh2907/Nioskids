@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { ArrowRight, HeartHandshake, Lightbulb, Sparkles, Star } from "lucide-react";
+import { ArrowRight, BookOpenCheck, HeartHandshake, Lightbulb, ShieldCheck, Sparkles, Star } from "lucide-react";
 
 type EmotionalPoint = {
   title: string;
@@ -67,6 +67,48 @@ export function CuteFinalCTA({ title, copy, href = "/contact", label = "Book A W
       <h2>{title}</h2>
       <p>{copy}</p>
       <Link href={href}>{label} <ArrowRight className="size-4" aria-hidden /></Link>
+    </section>
+  );
+}
+
+export function StorybookChapter({
+  chapter,
+  title,
+  copy,
+  trust,
+  path,
+  tone = "sun"
+}: {
+  chapter: string;
+  title: string;
+  copy: string;
+  trust: string;
+  path: string[];
+  tone?: "sun" | "sky" | "mint" | "coral" | "grape";
+}) {
+  return (
+    <section className={`storybook-chapter chapter-${tone}`}>
+      <div className="storybook-cloud cloud-left" aria-hidden />
+      <div className="storybook-cloud cloud-right" aria-hidden />
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+        <div className="chapter-copy">
+          <span><BookOpenCheck className="size-4" aria-hidden /> {chapter}</span>
+          <h2>{title}</h2>
+          <p>{copy}</p>
+          <div className="chapter-trust">
+            <ShieldCheck className="size-5" aria-hidden />
+            <strong>{trust}</strong>
+          </div>
+        </div>
+        <div className="chapter-map" aria-label={`${chapter} adventure path`}>
+          {path.map((item, index) => (
+            <div key={item} style={{ "--i": index } as CSSProperties}>
+              <span>{index + 1}</span>
+              <strong>{item}</strong>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

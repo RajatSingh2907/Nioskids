@@ -4,7 +4,7 @@ import { ArrowRight, BookOpen, CheckCircle2, Rocket } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
+import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { learningPathways, programs } from "@/lib/site-data";
 
@@ -38,6 +38,15 @@ export default function ProgramsPage() {
             </div>
           </div>
         </section>
+
+        <StorybookChapter
+          chapter="Chapter 02 - Choose Your Island"
+          title="Each Program Is A Different Island In The Same Learning World"
+          copy="Instead of presenting programs like a fee chart, this chapter helps families imagine where their child might feel most ready to begin."
+          trust="Parents compare stages through age, readiness, outcomes and support needs."
+          path={["Explore", "Match", "Plan", "Practice", "Review"]}
+          tone="sun"
+        />
 
         <PageEmotionalSections
           eyebrow="Choosing gently"

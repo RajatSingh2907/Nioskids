@@ -5,7 +5,7 @@ import { ArrowRight, BookOpenCheck, HeartHandshake, Lightbulb, ShieldCheck, Spar
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { PageEmotionalSections } from "@/components/PageEnhancements";
+import { PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
@@ -55,6 +55,15 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <StorybookChapter
+          chapter="Chapter 01 - The Beginning"
+          title="Where A Child's Learning Story Starts Feeling Softer"
+          copy="This chapter introduces the heart of NIOS Kids: a place where children are not rushed into confidence, and parents are not left alone to decode flexible learning."
+          trust="Parents see a clear philosophy before they ever fill a form."
+          path={["Wonder", "Listen", "Understand", "Support", "Grow"]}
+          tone="sky"
+        />
 
         <PageEmotionalSections
           eyebrow="Why this exists"

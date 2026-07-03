@@ -5,7 +5,7 @@ import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { InteractiveMap } from "@/components/InteractiveMap";
 import { Navbar } from "@/components/Navbar";
-import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
+import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { siteContact } from "@/lib/site-data";
 
@@ -51,6 +51,15 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
+
+        <StorybookChapter
+          chapter="Chapter 06 - Counselling Camp"
+          title="A Warm Place To Bring The Questions You Cannot Yet Name"
+          copy="This chapter is for parents who know something needs support, even if they do not yet know the exact program, stage or NIOS question."
+          trust="Parents get a clear response path: message, discuss, suggest, begin."
+          path={["Ask", "Share", "Listen", "Guide", "Begin"]}
+          tone="sky"
+        />
 
         <PageEmotionalSections
           eyebrow="Before you call"

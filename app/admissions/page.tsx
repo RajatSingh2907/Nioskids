@@ -4,7 +4,7 @@ import { ArrowRight, CalendarCheck, ClipboardList, FileCheck2, Phone, ShieldChec
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
+import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { admissions, siteContact } from "@/lib/site-data";
 
@@ -55,6 +55,15 @@ export default function AdmissionsPage() {
             </div>
           </div>
         </section>
+
+        <StorybookChapter
+          chapter="Chapter 05 - The Welcome Gate"
+          title="A Gentle Entry Point Before Any Formal Decision"
+          copy="This chapter helps parents step in without pressure. First we understand the child, then we suggest the right path."
+          trust="Parents see the process, documents and fit checks before committing."
+          path={["Connect", "Counsel", "Prepare", "Register", "Begin"]}
+          tone="grape"
+        />
 
         <PageEmotionalSections
           eyebrow="No pressure start"

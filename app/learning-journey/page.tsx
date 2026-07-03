@@ -5,7 +5,7 @@ import { ArrowRight, BookOpenCheck, CalendarCheck, Compass, FileCheck2, HeartHan
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { CuteFinalCTA, PageEmotionalSections } from "@/components/PageEnhancements";
+import { CuteFinalCTA, PageEmotionalSections, StorybookChapter } from "@/components/PageEnhancements";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { journey } from "@/lib/site-data";
 
@@ -94,6 +94,15 @@ export default function LearningJourneyPage() {
             </div>
           </div>
         </section>
+
+        <StorybookChapter
+          chapter="Chapter 03 - The Learning Map"
+          title="A Roadmap Children Can Follow And Parents Can Trust"
+          copy="This chapter turns learning into a visible map, where every milestone is small enough to start and meaningful enough to celebrate."
+          trust="Parents understand the rhythm before the child enters the routine."
+          path={["Discover", "Plan", "Practice", "Create", "Achieve"]}
+          tone="mint"
+        />
 
         <PageEmotionalSections
           eyebrow="More than steps"
