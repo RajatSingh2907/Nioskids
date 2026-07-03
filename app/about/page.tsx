@@ -34,7 +34,7 @@ export default function AboutPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page about-page">
-        <Hero id="about" eyebrow="About NIOS Kids" eyebrowIcon={<Sparkles className="size-4" aria-hidden />} title="Flexible Learning Should Feel Clear, Kind And Joyful" copy="NIOS Kids is built for families who want child-friendly learning support without losing structure. We combine creative lessons, mentoring and parent guidance so flexible education feels confident instead of confusing." primaryAction={{ href: "/programs", label: "Explore Programs", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/contact", label: "Talk To A Counsellor" }} />
+        <Hero id="about" title="Flexible Learning Should Feel Clear, Kind And Joyful" copy="NIOS Kids is built for families who want child-friendly learning support without losing structure. We combine creative lessons, mentoring and parent guidance so flexible education feels confident instead of confusing." imageSrc="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" imageAlt="Teacher and family discussing child learning progress in a classroom" primaryAction={{ href: "/programs", label: "Explore Programs", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/contact", label: "Talk To A Counsellor" }} />
 
         <StorybookChapter
           chapter="Chapter 01 - The Beginning"

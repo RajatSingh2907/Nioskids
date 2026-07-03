@@ -13,12 +13,11 @@ type HeroAction = {
 
 type HeroProps = {
   id?: string;
-  eyebrow?: string;
-  eyebrowIcon?: ReactNode;
   title?: string;
   copy?: string;
   primaryAction?: HeroAction;
   secondaryAction?: HeroAction;
+  imageSrc?: string;
   imageAlt?: string;
   priority?: boolean;
   className?: string;
@@ -38,12 +37,11 @@ const defaultSecondaryAction = {
 
 export function Hero({
   id = "home",
-  eyebrow,
-  eyebrowIcon,
   title = "Flexible NIOS Learning, Made Joyful",
   copy = "A colorful learning world where children build confidence through stories, projects and practice, while parents get clear guidance for flexible NIOS-aligned learning.",
   primaryAction = defaultPrimaryAction,
   secondaryAction = defaultSecondaryAction,
+  imageSrc = "/images/nios-learning-world.png",
   imageAlt = "Happy children exploring a colorful NIOS learning world with books, rainbow, clouds and nature",
   priority = true,
   className = ""
@@ -83,12 +81,6 @@ export function Hero({
       <motion.div aria-hidden className="floating-book" style={{ x: heroArtX, y: heroArtY }} />
       <div className="hero-inner mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
         <motion.div style={{ x: textX, y: textY }} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }} className="hero-copy-wrap relative z-10">
-          {eyebrow ? (
-            <span className="hero-eyebrow">
-              {eyebrowIcon}
-              {eyebrow}
-            </span>
-          ) : null}
           <h1 className="hero-title max-w-3xl font-heading text-[clamp(3.2rem,9vw,6.9rem)] font-extrabold leading-[0.92] text-ink">
             {title}
           </h1>
@@ -105,7 +97,7 @@ export function Hero({
           </div>
         </motion.div>
         <motion.div style={{ x: heroArtX, y: heroArtY }} initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.15 }} className="hero-picture relative z-10">
-          <Image src="/images/nios-learning-world.png" alt={imageAlt} width={1400} height={1000} priority={priority} className="h-auto w-full rounded-[2rem]" />
+          <Image src={imageSrc} alt={imageAlt} width={1400} height={1000} priority={priority} className="h-auto w-full rounded-[2rem]" />
         </motion.div>
       </div>
       <div className="grass-divider" aria-hidden />

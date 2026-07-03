@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, CalendarCheck, ClipboardList, FileCheck2, ShieldCheck } from "lucide-react";
+import { ArrowRight, ClipboardList, FileCheck2, ShieldCheck } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
@@ -35,7 +35,7 @@ export default function AdmissionsPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page admissions-page">
-        <Hero id="admissions" eyebrow="Admissions" eyebrowIcon={<CalendarCheck className="size-4" aria-hidden />} title="A Calm Start For Parents, A Gentle Start For Children" copy="Admission begins with a conversation, not pressure. We understand your child's learning stage, family goals and support needs before suggesting a program." primaryAction={{ href: "/contact", label: "Book Counselling", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: siteContact.whatsapp, label: "WhatsApp Us" }} />
+        <Hero id="admissions" title="A Calm Start For Parents, A Gentle Start For Children" copy="Admission begins with a conversation, not pressure. We understand your child's learning stage, family goals and support needs before suggesting a program." imageSrc="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" imageAlt="Students working with a teacher during a hands-on classroom activity" primaryAction={{ href: "/contact", label: "Book Counselling", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: siteContact.whatsapp, label: "WhatsApp Us" }} />
 
         <StorybookChapter
           chapter="Chapter 05 - The Welcome Gate"

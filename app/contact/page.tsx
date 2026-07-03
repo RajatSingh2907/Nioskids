@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, CheckCircle2, Clock, Mail, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, Mail, MapPin, Phone, Sparkles } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
@@ -36,7 +36,7 @@ export default function ContactPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page contact-page">
-        <Hero id="contact" eyebrow="Contact" eyebrowIcon={<MessageCircle className="size-4" aria-hidden />} title="Start With A Parent Counselling Conversation" copy="Share your child's age, current learning situation and NIOS goals. We will help you understand the best next step with dummy contact details for now." primaryAction={{ href: siteContact.whatsapp, label: "Message On WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call Counselling" }} />
+        <Hero id="contact" title="Start With A Parent Counselling Conversation" copy="Share your child's age, current learning situation and NIOS goals. We will help you understand the best next step with dummy contact details for now." imageSrc="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" imageAlt="Teacher and family discussing progress in a classroom environment" primaryAction={{ href: siteContact.whatsapp, label: "Message On WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call Counselling" }} />
 
         <StorybookChapter
           chapter="Chapter 06 - Counselling Camp"
@@ -61,9 +61,21 @@ export default function ContactPage() {
           bridgeItems={["Worry", "Message", "Listen", "Guide", "Relief"]}
         />
 
-        <section className="trust-section bg-[#EEF8FF]">
-          <div className="contact-page-panel mx-auto max-w-3xl">
-            <ContactForm />
+        <section className="trust-section contact-form-section">
+          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+            <div className="contact-form-note">
+              <Sparkles className="size-12 text-coral" aria-hidden />
+              <h2>Send The First Details Calmly</h2>
+              <p>Share the basic parent contact, child age and what feels confusing right now. The form stays short so the counselling conversation can do the real listening.</p>
+              <div>
+                <span>Parent name</span>
+                <span>Phone number</span>
+                <span>Child age</span>
+              </div>
+            </div>
+            <div className="contact-page-panel">
+              <ContactForm />
+            </div>
           </div>
         </section>
 

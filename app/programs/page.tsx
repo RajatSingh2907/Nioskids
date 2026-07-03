@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpen, CheckCircle2, Rocket } from "lucide-react";
+import { ArrowRight, BookOpen, CheckCircle2 } from "lucide-react";
 import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
@@ -28,7 +28,7 @@ export default function ProgramsPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page programs-page">
-        <Hero id="programs" eyebrow="Programs" eyebrowIcon={<Rocket className="size-4" aria-hidden />} title="Choose A Learning Path That Fits Your Child" copy="Each program is designed around age, confidence, parent goals and NIOS-aligned academic needs. Dummy details are used for now and can be replaced with exact offerings later." primaryAction={{ href: "/contact", label: "Get Program Guidance", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/nios-info", label: "Understand NIOS Info" }} />
+        <Hero id="programs" title="Choose A Learning Path That Fits Your Child" copy="Each program is designed around age, confidence, parent goals and NIOS-aligned academic needs. Dummy details are used for now and can be replaced with exact offerings later." imageSrc="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" imageAlt="Children reading and learning together in a warm classroom setting" primaryAction={{ href: "/contact", label: "Get Program Guidance", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/nios-info", label: "Understand NIOS Info" }} />
 
         <StorybookChapter
           chapter="Chapter 02 - Choose Your Island"
