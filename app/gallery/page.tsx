@@ -27,7 +27,7 @@ export default function GalleryPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page gallery-page">
-        <Hero id="gallery" title="Every Learning Moment Becomes A Little Story" copy="Step into a warm evidence wall where reading circles, projects, creative work and parent reviews feel less like records and more like memories children are proud to revisit." imageSrc="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80" imageAlt="Children creating artwork and learning through play" primaryAction={{ href: "#gallery-wall", label: "Explore Moments", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/learning-journey", label: "See The Journey" }} />
+        <Hero id="gallery" title="Learning Evidence From Basics To Boards" copy="Explore reading, projects, STEM, digital learning and review moments that show progress across younger learners and higher-class students." imageSrc="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80" imageAlt="Students creating artwork and learning through projects" primaryAction={{ href: "#gallery-wall", label: "Explore Moments", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/learning-journey", label: "See The Journey" }} />
 
         <StorybookChapter
           chapter="Chapter 04 - Memory Meadow"

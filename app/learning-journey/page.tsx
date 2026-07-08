@@ -72,7 +72,7 @@ export default function LearningJourneyPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page journey-page">
-        <Hero id="learning-journey" title="Every Child Needs A Path They Can Believe In" copy="Our journey turns flexible learning into a visible adventure: discover the child, create a plan, learn with joy, review progress and prepare calmly for the next milestone." imageSrc="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" imageAlt="Teacher guiding students through a hands-on learning activity" primaryAction={{ href: "/contact", label: "Create My Child's Roadmap", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/programs", label: "Compare Programs" }} />
+        <Hero id="learning-journey" title="Every Student Needs A Path They Can Trust" copy="Our journey turns flexible learning into a visible roadmap: discover the learner, create a plan, practice consistently, review progress and prepare for the next milestone." imageSrc="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" imageAlt="Teacher guiding students through a hands-on learning activity" primaryAction={{ href: "/contact", label: "Create My Roadmap", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/programs", label: "Compare Class Paths" }} />
 
         <StorybookChapter
           chapter="Chapter 03 - The Learning Map"

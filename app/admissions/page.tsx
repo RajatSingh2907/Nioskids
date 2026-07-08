@@ -9,8 +9,8 @@ import { SmoothScroll } from "@/components/SmoothScroll";
 import { admissions, siteContact } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Admissions | Start With Parent Counselling",
-  description: "Understand the calm admissions and counselling process for NIOS Kids learning support programs."
+  title: "Admissions | Start With Learning Path Counselling",
+  description: "Understand the calm counselling process for students from Class 1 to 12 across NIOS learning support pathways."
 };
 
 const documents = [
@@ -22,9 +22,9 @@ const documents = [
 ];
 
 const fitChecks = [
-  ["Flexible schooling need", "The child needs learning support that can adapt to pace, confidence or schedule."],
+  ["Flexible schooling need", "The student needs learning support that can adapt to pace, confidence or schedule."],
   ["Parent wants clarity", "The family wants a visible roadmap instead of only classes."],
-  ["Creative learning helps", "The child responds better to activities, stories, projects and patient mentoring."],
+  ["Creative learning helps", "The learner responds better to activities, examples, projects and patient mentoring."],
   ["NIOS pathway interest", "The family is exploring OBE, secondary, senior secondary or support around NIOS."]
 ];
 
@@ -35,7 +35,7 @@ export default function AdmissionsPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page admissions-page">
-        <Hero id="admissions" title="A Calm Start For Parents, A Gentle Start For Children" copy="Admission begins with a conversation, not pressure. We understand your child's learning stage, family goals and support needs before suggesting a program." imageSrc="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" imageAlt="Students working with a teacher during a hands-on classroom activity" primaryAction={{ href: "/contact", label: "Book Counselling", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: siteContact.whatsapp, label: "WhatsApp Us" }} />
+        <Hero id="admissions" title="A Calm Start For Every Learning Stage" copy="Admission begins with a conversation, not pressure. We understand the student's class level, family goals and support needs before suggesting a pathway." imageSrc="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" imageAlt="Students working with a teacher during a hands-on classroom activity" primaryAction={{ href: "/contact", label: "Plan My NIOS Journey", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: siteContact.whatsapp, label: "WhatsApp Us" }} />
 
         <StorybookChapter
           chapter="Chapter 05 - The Welcome Gate"

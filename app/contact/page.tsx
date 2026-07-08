@@ -11,12 +11,12 @@ import { SmoothScroll } from "@/components/SmoothScroll";
 import { siteContact } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Contact NIOS Kids | Book Parent Counselling",
-  description: "Contact NIOS Kids for parent counselling, program guidance and child-friendly NIOS-aligned learning support."
+  title: "Contact NIOS Kids | Talk To A Learning Mentor",
+  description: "Contact NIOS Kids for class-wise guidance, program counselling and NIOS-aligned learning support from Class 1 to 12."
 };
 
 const contactReasons = [
-  ["Choose the right program", "Tell us the child's age, current learning stage and goals."],
+  ["Choose the right program", "Tell us the student's class, current learning stage and goals."],
   ["Understand NIOS support", "Ask about OBE, secondary, senior secondary, TMA or practical readiness."],
   ["Plan learning rhythm", "Discuss weekly classes, practice, activities and parent review style."],
   ["Start calmly", "Get a suggested next step without pressure-heavy admission language."]
@@ -24,7 +24,7 @@ const contactReasons = [
 
 const counsellingFlow = [
   ["Share", "Fill the form or message us on WhatsApp."],
-  ["Discuss", "We understand the child's needs and parent goals."],
+  ["Discuss", "We understand the student's needs and family goals."],
   ["Suggest", "You receive a suitable program or support pathway."],
   ["Begin", "Learning starts with a simple weekly rhythm."]
 ];
@@ -36,7 +36,7 @@ export default function ContactPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page contact-page">
-        <Hero id="contact" title="Start With A Parent Counselling Conversation" copy="Share your child's age, current learning situation and NIOS goals. We will help you understand the best next step with dummy contact details for now." imageSrc="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" imageAlt="Teacher and family discussing progress in a classroom environment" primaryAction={{ href: siteContact.whatsapp, label: "Message On WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call Counselling" }} />
+        <Hero id="contact" title="Talk To A Mentor About Your Learning Path" copy="Share the student's class, current learning situation and NIOS goals. We will help you understand the best next step." imageSrc="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" imageAlt="Teacher and family discussing progress in a classroom environment" primaryAction={{ href: siteContact.whatsapp, label: "Message On WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call A Mentor" }} />
 
         <StorybookChapter
           chapter="Chapter 06 - Counselling Camp"
@@ -66,7 +66,7 @@ export default function ContactPage() {
             <div className="contact-form-note">
               <Sparkles className="size-12 text-coral" aria-hidden />
               <h2>Send The First Details Calmly</h2>
-              <p>Share the basic parent contact, child age and what feels confusing right now. The form stays short so the counselling conversation can do the real listening.</p>
+              <p>Share the basic contact, student class and what feels confusing right now. The form stays short so the counselling conversation can do the real listening.</p>
               <div>
                 <span>Parent name</span>
                 <span>Phone number</span>

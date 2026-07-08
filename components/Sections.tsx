@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, BookMarked, CalendarDays, ClipboardCheck, FlaskConical, GraduationCap, Mail, MapPin, MessageCircleQuestion, Phone } from "lucide-react";
 import {
   activities,
   admissions,
@@ -62,9 +62,9 @@ export function TrustedSection() {
 export function AboutSection() {
   return (
     <section id="about" className="section-pad bg-[#EEF8FF] story-world">
-      <SectionTitle eyebrow="About NIOS Support" title="Flexible Schooling Needs A Clear Path" copy="NIOS gives families flexibility. We make that flexibility easier to use with mentoring, activity-based learning, subject planning and parent-friendly milestones." />
+      <SectionTitle eyebrow="About NIOS Support" title="Flexible Schooling Needs A Clear Path" copy="NIOS gives families and students flexibility. We make it easier to use with mentoring, activity-based learning, subject planning and exam-ready milestones." />
       <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
-        {["Children learn through curiosity, projects and guided practice.", "Parents understand the roadmap instead of guessing the next step.", "Mentors balance confidence, consistency and exam-readiness."].map((item, index) => (
+        {["Younger learners build basics through curiosity, projects and guided practice.", "Older students get subject planning, revision rhythm and exam-readiness.", "Families understand the roadmap instead of guessing the next step."].map((item, index) => (
           <Reveal key={item} delay={index * 0.08} className="story-card">
             <span className="story-spark" aria-hidden />
             <span className="story-badge">{index + 1}</span>
@@ -79,7 +79,7 @@ export function AboutSection() {
 export function FeaturesSection() {
   return (
     <section className="section-pad doodle-bg pencil-world">
-      <SectionTitle eyebrow="Why Choose Us" title="Trust For Parents, Joy For Children" copy="The platform is built for families who want flexible learning without losing structure, accountability or warmth." />
+      <SectionTitle eyebrow="Why Choose Us" title="Warm Support With Academic Structure" copy="The platform is built for learners from Class 1 to 12 who need flexible learning without losing structure, accountability or confidence." />
       <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2 xl:grid-cols-3">
         {features.map(([title, copy, Icon, color], index) => (
           <Reveal key={title} delay={index * 0.04} className={`feature-card ${color}`}>
@@ -100,9 +100,9 @@ export function LearningSupportSection() {
       <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
         <Reveal className="support-story">
           <span className="rounded-full bg-white px-4 py-2 text-sm font-extrabold text-coral shadow-float">Learning Support</span>
-          <h2>Support That Fits Each Child</h2>
+          <h2>Support That Fits Each Learner</h2>
           <p>
-            Clear pathways, small batches, remedial care and parent guidance help children learn with less pressure and more confidence.
+            Clear pathways, small batches, remedial care and mentor guidance help students learn with less pressure and more confidence.
           </p>
           <div className="support-callout">
             <strong>Best for families looking for</strong>
@@ -151,7 +151,7 @@ export function LearningSupportSection() {
 export function JourneySection() {
   return (
     <section id="journey" className="section-pad bg-[#FFE5EC] road-world">
-      <SectionTitle eyebrow="Learning Journey" title="From Clarity To Confidence" copy="A simple roadmap helps parents see what is happening and helps children feel progress without pressure." />
+      <SectionTitle eyebrow="Learning Journey" title="From Clarity To Confidence" copy="A simple roadmap helps students and parents see what is happening, from early basics to board preparation." />
       <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-3 lg:grid-cols-6">
         {journey.map(([title, copy, Icon], index) => (
           <Reveal key={title} delay={index * 0.05} className="journey-step">
@@ -171,8 +171,8 @@ export function JourneySection() {
 export function ProgramsSection() {
   return (
     <section id="programs" className="section-pad bg-cream island-world">
-      <SectionTitle eyebrow="Programs" title="Choose The Right Learning Stage" copy="Each program combines joyful learning with parent-visible outcomes, so families can choose with confidence." />
-      <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
+      <SectionTitle eyebrow="Class Pathways" title="Choose The Right Stage From Class 1 To 12" copy="Each pathway balances creative learning, study habits and academic milestones so younger learners and higher-class students both feel included." />
+      <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2 xl:grid-cols-4">
         {programs.map(({ title, age, copy, gradient, outcomes, parentFit }, index) => (
           <Reveal key={title} delay={index * 0.08} className={`program-island bg-gradient-to-br ${gradient}`}>
             <div className="island-cloud" aria-hidden />
@@ -192,10 +192,43 @@ export function ProgramsSection() {
   );
 }
 
+const seniorSupport = [
+  ["Subject Planning", "Choose and organize subjects with a realistic weekly study map.", BookMarked],
+  ["TMA Guidance", "Understand assignment expectations, timelines and drafting support.", ClipboardCheck],
+  ["Exam Readiness", "Build revision checkpoints, practice rhythm and confidence before exams.", GraduationCap],
+  ["Practical Preparation", "Plan practical-related awareness early for applicable subjects.", FlaskConical],
+  ["Study Schedule", "Create a steady timetable that works with flexible learning.", CalendarDays],
+  ["Doubt Clearing", "Use mentor conversations to solve stuck topics before they pile up.", MessageCircleQuestion]
+] as const;
+
+export function SeniorSupportSection() {
+  return (
+    <section className="section-pad senior-support-world">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+        <Reveal className="senior-support-intro">
+          <span>For Classes 9-12</span>
+          <h2>Secondary & Senior Secondary Support</h2>
+          <p>Older students need more than playful activities. They need subject clarity, TMA planning, revision rhythm, practical awareness and a calm mentor who can help them stay consistent.</p>
+          <a href="/contact">Get Exam Support <ArrowRight className="size-4" aria-hidden /></a>
+        </Reveal>
+        <div className="senior-support-grid">
+          {seniorSupport.map(([title, copy, Icon], index) => (
+            <Reveal key={title} delay={index * 0.04} className="senior-support-card">
+              <Icon aria-hidden />
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function ActivitiesSection() {
   return (
     <section className="section-pad bg-[#EEF8FF] activity-world">
-      <SectionTitle eyebrow="Interactive Learning" title="Activities With Academic Purpose" copy="Every activity is fun on the surface and useful underneath: vocabulary, reasoning, expression, observation or confidence." />
+      <SectionTitle eyebrow="Interactive Learning" title="Activities With Academic Purpose" copy="Activities are age-aware: playful for juniors, deeper and skill-focused for middle and higher-class students." />
       <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-4">
         {activities.map(([label, Icon], index) => (
           <Reveal key={label} delay={index * 0.04} className="activity-pill">
@@ -210,7 +243,7 @@ export function ActivitiesSection() {
 export function PeopleAndStories() {
   return (
     <section className="section-pad doodle-bg speech-world">
-      <SectionTitle eyebrow="Mentors & Stories" title="Real Guidance Families Can Feel" copy="Children need friendly faces. Parents need credible guides. This section speaks to both." />
+      <SectionTitle eyebrow="Mentors & Stories" title="Guidance Students Can Actually Use" copy="Younger learners need friendly faces. Older students need credible academic guides. This section speaks to both." />
       <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
         <div className="grid gap-5 sm:grid-cols-3">
           {teachers.map(({ name, role, intro, strengths }, index) => (
@@ -236,7 +269,7 @@ export function PeopleAndStories() {
 export function GallerySection() {
   return (
     <section id="gallery" className="section-pad bg-[#FFE5EC] gallery-world">
-      <SectionTitle eyebrow="Gallery" title="Moments Parents Want To See" copy="A preview of the kind of learning evidence families value: projects, reading, experiments and celebration." />
+      <SectionTitle eyebrow="Gallery" title="Learning Evidence Across Stages" copy="A preview of reading, projects, STEM, digital learning and progress moments across younger and higher-class students." />
       <InteractiveGallery />
     </section>
   );
@@ -245,7 +278,7 @@ export function GallerySection() {
 export function AdmissionsSection() {
   return (
     <section id="admissions" className="section-pad bg-cream launch-world">
-      <SectionTitle eyebrow="Admissions" title="A Calm Start For Parents" copy="The first step is not pressure. It is a clear conversation about your child, your goals and whether this path fits." />
+      <SectionTitle eyebrow="Admissions" title="A Calm Start For Students And Parents" copy="The first step is not pressure. It is a clear conversation about class level, goals, subjects and whether this path fits." />
       <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-4">
         {admissions.map(([step, copy, Icon], index) => (
           <Reveal key={step} delay={index * 0.05} className="admission-step">
@@ -267,7 +300,7 @@ export function AdmissionsSection() {
 export function FAQSection() {
   return (
     <section className="section-pad bg-[#EEF8FF]">
-      <SectionTitle eyebrow="FAQ" title="Clear Answers Before Counselling" copy="Quick clarity for parents comparing flexible schooling, learning support and NIOS-aligned guidance." />
+      <SectionTitle eyebrow="FAQ" title="Clear Answers Before Counselling" copy="Quick clarity for students and parents comparing flexible schooling, learning support and NIOS-aligned guidance." />
       <FAQBooks />
     </section>
   );
@@ -278,9 +311,9 @@ export function ContactSection() {
     <section id="contact" className="section-pad contact-world">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
-          <span className="rounded-full bg-white px-4 py-2 text-sm font-extrabold text-coral shadow-float">Parent Counselling</span>
-          <h2 className="mt-5 font-heading text-6xl font-extrabold leading-none text-ink">Start With A Parent Counselling Call</h2>
-          <p className="mt-5 text-lg leading-8 text-ink/75">Tell us your child&apos;s age, current learning situation and NIOS goals. We will suggest the right program stage and next step.</p>
+          <span className="rounded-full bg-white px-4 py-2 text-sm font-extrabold text-coral shadow-float">Mentor Counselling</span>
+          <h2 className="mt-5 font-heading text-6xl font-extrabold leading-none text-ink">Start With A Learning Path Call</h2>
+          <p className="mt-5 text-lg leading-8 text-ink/75">Tell us the student&apos;s class, current learning situation and NIOS goals. We will suggest the right program stage and next step.</p>
           <div className="mt-8 space-y-3 font-bold text-ink/80">
             <p><Phone className="mr-2 inline size-5" /> {siteContact.phone}</p>
             <p><Mail className="mr-2 inline size-5" /> {siteContact.email}</p>

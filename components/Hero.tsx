@@ -25,24 +25,24 @@ type HeroProps = {
 
 const defaultPrimaryAction = {
   href: "/programs",
-  label: "Find Your Program",
+  label: "Find My Learning Path",
   icon: <ArrowRight className="size-5" aria-hidden />
 };
 
 const defaultSecondaryAction = {
   href: "/contact",
-  label: "Book Parent Counselling",
+  label: "Talk To A Mentor",
   icon: <CalendarHeart className="size-5" aria-hidden />
 };
 
 export function Hero({
   id = "home",
-  title = "Flexible NIOS Learning, Made Joyful",
-  copy = "A colorful learning world where children build confidence through stories, projects and practice, while parents get clear guidance for flexible NIOS-aligned learning.",
+  title = "Flexible NIOS Learning For Every Stage",
+  copy = "Support for young learners building basics and older students preparing for Secondary, Senior Secondary, assignments and exams.",
   primaryAction = defaultPrimaryAction,
   secondaryAction = defaultSecondaryAction,
   imageSrc = "/images/nios-learning-world.png",
-  imageAlt = "Happy children exploring a colorful NIOS learning world with books, rainbow, clouds and nature",
+  imageAlt = "Students exploring a colorful NIOS learning world with books, planning tools and guided support",
   priority = true,
   className = ""
 }: HeroProps) {

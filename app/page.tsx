@@ -2,7 +2,7 @@ import { CursorSparkles } from "@/components/CursorSparkles";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
-import { AboutSection, ActivitiesSection, AdmissionsSection, ContactSection, FAQSection, FeaturesSection, GallerySection, JourneySection, LearningSupportSection, PeopleAndStories, ProgramsSection, TrustedSection } from "@/components/Sections";
+import { AboutSection, ActivitiesSection, AdmissionsSection, ContactSection, FAQSection, FeaturesSection, GallerySection, JourneySection, LearningSupportSection, PeopleAndStories, ProgramsSection, SeniorSupportSection, TrustedSection } from "@/components/Sections";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
 export default function Home() {
@@ -19,6 +19,7 @@ export default function Home() {
         <FeaturesSection />
         <JourneySection />
         <ProgramsSection />
+        <SeniorSupportSection />
         <ActivitiesSection />
         <PeopleAndStories />
         <GallerySection />

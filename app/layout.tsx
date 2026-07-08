@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://nioskids.example"),
   applicationName: "NIOS Kids",
   title: {
-    default: "NIOS Kids Learning Platform | Learn Beyond Boundaries",
+    default: "NIOS Kids Learning Platform | Class 1-12 Flexible Learning Support",
     template: "%s | NIOS Kids"
   },
   description:
-    "A colorful, parent-trusted and child-friendly NIOS learning platform with flexible programs, creative activities and joyful mentoring.",
-  keywords: ["NIOS kids", "NIOS learning support", "open schooling support", "homeschool support", "children education", "flexible learning"],
+    "Flexible learning support for every stage, from foundational years to board-ready NIOS students with mentoring, class pathways, TMA guidance and exam readiness.",
+  keywords: ["NIOS learning support", "open schooling support", "Class 1 to 12 learning", "secondary exam support", "senior secondary NIOS", "flexible learning"],
   alternates: {
     canonical: "/"
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "NIOS Kids Learning Platform",
-    description: "A magical learning world for children and trusted guidance for parents.",
+    description: "Flexible learning support for younger learners and higher-class NIOS students.",
     images: ["/images/nios-learning-world.png"]
   }
 };
@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     educationalCredentialAwarded: "NIOS learning support",
     telephone: "+91 98765 43210",
     email: "hello@nioskids.example",
-    audience: [{ "@type": "Audience", audienceType: "Children and parents" }],
+    audience: [{ "@type": "Audience", audienceType: "Students from Class 1 to 12 and parents" }],
     sameAs: ["https://nioskids.example/about", "https://nioskids.example/programs", "https://nioskids.example/nios-info"]
   };
 
