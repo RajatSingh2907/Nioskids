@@ -10,8 +10,8 @@ import { SmoothScroll } from "@/components/SmoothScroll";
 import { learningPathways, programs } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Programs | NIOS Kids Learning Pathways",
-  description: "Explore foundation, primary, OBE, secondary, senior secondary and remedial learning support programs for children and parents."
+  title: "Class Pathways | NIOS Learning Support",
+  description: "Explore Class 1-5, 6-8, 9-10 and 11-12 learning pathways with NIOS-aligned mentoring, TMA planning and exam readiness."
 };
 
 const weeklyRhythm = [
@@ -28,28 +28,28 @@ export default function ProgramsPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page programs-page">
-        <Hero id="programs" title="Choose A Learning Path That Fits Your Child" copy="Each program is designed around age, confidence, parent goals and NIOS-aligned academic needs. Dummy details are used for now and can be replaced with exact offerings later." imageSrc="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" imageAlt="Children reading and learning together in a warm classroom setting" primaryAction={{ href: "/contact", label: "Get Program Guidance", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/nios-info", label: "Understand NIOS Info" }} />
+        <Hero id="programs" title="Class-Wise Learning Paths From 1 To 12" copy="Choose support for foundation years, middle-school concept clarity, Secondary preparation or Senior Secondary TMA, practical and exam readiness." imageSrc="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" imageAlt="Students reading and learning together in a classroom setting" primaryAction={{ href: "/contact", label: "Find My Learning Path", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/nios-info", label: "Understand NIOS Info" }} />
 
         <StorybookChapter
-          chapter="Chapter 02 - Choose Your Island"
-          title="Each Program Is A Different Island In The Same Learning World"
-          copy="Instead of presenting programs like a fee chart, this chapter helps families imagine where their child might feel most ready to begin."
-          trust="Parents compare stages through age, readiness, outcomes and support needs."
+          chapter="Chapter 02 - Choose Your Stage"
+          title="Every Class Stage Needs A Different Kind Of Support"
+          copy="Instead of presenting programs like a fee chart, this chapter helps students and families compare the right starting point."
+          trust="Families compare class level, readiness, outcomes and support needs."
           path={["Explore", "Match", "Plan", "Practice", "Review"]}
           tone="sun"
         />
 
         <PageEmotionalSections
           eyebrow="Choosing gently"
-          title="The right program should feel like a good fit, not a forced label."
-          copy="A child may be ahead in curiosity, behind in routine, strong in projects and nervous in writing. Program guidance helps parents choose from the whole child, not one report card."
+          title="The right program should match class level, confidence and goals."
+          copy="A learner may need foundation support, concept clarity, study habits, TMA planning or exam readiness. Program guidance looks at the whole student, not one report card."
           points={[
             { title: "Stage fit", copy: "We look at age, readiness, confidence and learning goals together." },
             { title: "Pace fit", copy: "The rhythm can stay flexible while still keeping weekly accountability." },
-            { title: "Interest fit", copy: "Stories, projects, STEM and practice are balanced around what keeps the child engaged." }
+            { title: "Goal fit", copy: "Creative learning, STEM, revision and exam planning are balanced around the student's stage." }
           ]}
-          bridgeTitle="Parents choose better when the path feels human."
-          bridgeCopy="Instead of asking which class sounds impressive, we ask which starting point will help the child show up with less resistance and more belief."
+          bridgeTitle="Students progress better when the path feels realistic."
+          bridgeCopy="Instead of asking which class sounds impressive, we ask which starting point will help the learner show up with less resistance and more belief."
           bridgeItems={["Age", "Readiness", "Routine", "Interest", "Program"]}
         />
 
@@ -114,7 +114,7 @@ export default function ProgramsPage() {
           </div>
         </section>
 
-        <CuteFinalCTA title="Let Us Help You Pick The Happiest Starting Point" copy="Bring your child&apos;s age, worries and goals. We will turn the options into one clear, gentle recommendation your family can actually begin with." />
+        <CuteFinalCTA title="Let Us Help You Pick The Right Academic Stage" copy="Bring the student&apos;s class, worries and goals. We will turn the options into one clear recommendation your family can actually begin with." label="Find My Learning Path" />
       </main>
       <Footer />
     </>

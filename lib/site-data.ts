@@ -32,13 +32,13 @@ export const siteContact = {
   email: "hello@nioskids.example",
   location: "Online support with local counselling slots",
   hours: "Mon-Sat, 10:00 AM - 6:00 PM",
-  whatsapp: "https://wa.me/919876543210?text=Hi%20NIOS%20Kids%2C%20I%20want%20parent%20counselling%20for%20my%20child."
+  whatsapp: "https://wa.me/919876543210?text=Hi%20NIOS%20Kids%2C%20I%20want%20learning%20path%20guidance%20for%20a%20student."
 };
 
 export const navItems = [
   ["Home", "#home", Sparkles],
   ["About", "#about", BookOpen],
-  ["Programs", "#programs", Rocket],
+  ["Class Paths", "#programs", Rocket],
   ["Journey", "#journey", Compass],
   ["Gallery", "#gallery", Palette],
   ["Admissions", "#admissions", CalendarCheck],
@@ -46,29 +46,29 @@ export const navItems = [
 ] as const;
 
 export const stats = [
+  ["1-12", "Standards supported"],
   ["2,500+", "Guided learning sessions"],
-  ["98%", "Parent clarity rating"],
-  ["40+", "Activity-based modules"],
-  ["1:1", "Counselling and mentoring"]
+  ["40+", "Study and activity modules"],
+  ["1:1", "Mentor and counselling support"]
 ];
 
 export const trustBadges = [
-  ["NIOS-Aligned", "Flexible academic support mapped to open-schooling needs."],
-  ["Parent Updates", "Clear milestones, weekly focus areas and next-step guidance."],
-  ["Child-Centered", "Playful lessons that reduce pressure and build confidence."]
+  ["NIOS-Aligned", "Flexible academic support mapped from foundation years to secondary and senior secondary goals."],
+  ["Student Roadmaps", "Clear milestones, weekly focus areas and next-step guidance for learners and families."],
+  ["Balanced Learning", "Creative learning for younger students, structured study rhythm for higher classes."]
 ];
 
 export const features: [string, string, LucideIcon, string][] = [
-  ["NIOS Planning Support", "We help parents understand subjects, pacing, documentation and exam-readiness without confusion.", FileCheck2, "bg-sky/20"],
-  ["Flexible Learning Rhythm", "Children can move at a healthy pace while still following a visible academic roadmap.", CalendarCheck, "bg-sun/25"],
-  ["Creative Concept Building", "Stories, art, experiments and projects make textbook concepts easier to remember.", Brush, "bg-coral/15"],
-  ["Friendly Mentors", "Teachers focus on confidence, consistency and emotional comfort, not fear-based pressure.", HeartHandshake, "bg-mint/20"],
-  ["Parent Trust System", "Progress notes, counselling checkpoints and transparent communication keep families informed.", ShieldCheck, "bg-grape/15"],
-  ["Future Skills Layer", "Reading, communication, coding basics and problem-solving are woven into the learning journey.", Code2, "bg-orange/20"]
+  ["NIOS Planning Support", "Students and families get clarity on subjects, pacing, documentation, TMA and exam-readiness.", FileCheck2, "bg-sky/20"],
+  ["Flexible Learning Rhythm", "Younger learners and higher-class students can move at a healthy pace with a visible academic roadmap.", CalendarCheck, "bg-sun/25"],
+  ["Creative Concept Building", "Stories, experiments, projects and examples make concepts easier to understand and remember.", Brush, "bg-coral/15"],
+  ["Mentor-Led Study Support", "Mentors focus on confidence, consistency, doubt clearing and study habits without fear-based pressure.", HeartHandshake, "bg-mint/20"],
+  ["Family Trust System", "Progress notes, counselling checkpoints and transparent communication keep learners and parents aligned.", ShieldCheck, "bg-grape/15"],
+  ["Future Skills Layer", "Reading, communication, coding basics, problem-solving and independent study skills are woven into the journey.", Code2, "bg-orange/20"]
 ];
 
 export const journey: [string, string, LucideIcon][] = [
-  ["Discover", "Understand the child's level, interests and NIOS goals.", Trees],
+  ["Discover", "Understand the learner's level, interests and NIOS goals.", Trees],
   ["Plan", "Create a subject-wise learning path with parent clarity.", BookOpen],
   ["Practice", "Use weekly routines, worksheets and guided revision.", CheckCircle2],
   ["Create", "Add projects, activities and portfolio-style learning.", Brush],
@@ -78,28 +78,36 @@ export const journey: [string, string, LucideIcon][] = [
 
 export const programs = [
   {
-    title: "Foundation Explorers",
-    age: "Ages 4-7",
+    title: "Classes 1-5",
+    age: "Foundation & curiosity",
     gradient: "from-sky to-mint",
-    copy: "A gentle early-learning program for language, numbers, stories, motor skills and creative confidence.",
-    outcomes: ["Phonics and early reading", "Number sense through games", "Art, stories and speaking confidence"],
-    parentFit: "Best for families who want a joyful start before formal academic pressure."
+    copy: "A gentle program for language, numbers, reading confidence, curiosity and activity-led understanding.",
+    outcomes: ["Reading and writing basics", "Number sense and concept play", "Speaking, stories and creativity"],
+    parentFit: "Best for younger learners who need confidence with structure."
   },
   {
-    title: "Primary Pathfinders",
-    age: "Ages 8-11",
+    title: "Classes 6-8",
+    age: "Concept clarity & habits",
     gradient: "from-sun to-coral",
-    copy: "A project-rich bridge between core academics and curiosity-led learning for growing children.",
-    outcomes: ["Reading and writing routines", "Math and science concept clarity", "Weekly projects and presentations"],
-    parentFit: "Best for children who need structure without losing creativity."
+    copy: "A bridge stage for core subjects, study habits, projects and independent learning confidence.",
+    outcomes: ["Math and science clarity", "Reading, writing and note habits", "Projects and presentations"],
+    parentFit: "Best for middle-school learners building routine and confidence."
   },
   {
-    title: "NIOS Achievers",
-    age: "Ages 12-16",
+    title: "Classes 9-10",
+    age: "Secondary preparation",
     gradient: "from-grape to-sky",
-    copy: "Focused NIOS support with subject planning, revision rhythm, mentoring and exam-oriented clarity.",
-    outcomes: ["Subject selection guidance", "Exam-readiness checkpoints", "Study habits and portfolio skills"],
-    parentFit: "Best for families choosing flexible schooling with serious academic goals."
+    copy: "Focused secondary support with subject planning, revision rhythm, TMA awareness and exam readiness.",
+    outcomes: ["Subject-wise study planning", "Practice and revision checkpoints", "Exam and assignment readiness"],
+    parentFit: "Best for Class 10 level students who need a clear academic plan."
+  },
+  {
+    title: "Classes 11-12",
+    age: "Senior Secondary",
+    gradient: "from-mint to-sky",
+    copy: "Mature support for senior secondary subjects, practical awareness, TMA planning and future pathways.",
+    outcomes: ["Stream and subject clarity", "TMA and practical planning", "Board-ready revision schedule"],
+    parentFit: "Best for older students preparing seriously for Class 12 goals."
   }
 ];
 
@@ -128,7 +136,7 @@ export const learningPathways: [string, string, string, LucideIcon, string[]][] 
   [
     "Remedial & Counselling",
     "Learning support",
-    "Personalized help for children who need additional attention, emotional comfort or alternative learning methods.",
+    "Personalized help for students who need additional attention, emotional comfort or alternative learning methods.",
     HeartHandshake,
     ["One-on-one support", "Small-batch learning", "Confidence and habit building"]
   ],
@@ -149,19 +157,19 @@ export const learningPathways: [string, string, string, LucideIcon, string[]][] 
 ];
 
 export const parentTrustReasons: [string, string, LucideIcon][] = [
-  ["Child-Friendly Curriculum", "Lessons are mapped around the child's current level, pace and emotional comfort.", Puzzle],
-  ["Small Batches", "Children receive individual attention without the pressure of a crowded classroom.", UsersRound],
-  ["Sensitised Mentors", "Educators use patient, creative methods for diverse learning needs.", HeartHandshake],
-  ["Holistic Development", "Language, cognition, sensory-motor, personality and social confidence are considered together.", Sparkles]
+  ["Stage-Wise Curriculum", "Lessons are mapped around the learner's class level, pace and academic target.", Puzzle],
+  ["Small Batches", "Students receive individual attention without the pressure of a crowded classroom.", UsersRound],
+  ["Mentor Support", "Educators use patient, practical methods for diverse learning and exam needs.", HeartHandshake],
+  ["Academic + Confidence Growth", "Concept clarity, communication, study habits and confidence are considered together.", Sparkles]
 ];
 
 export const activities: [string, LucideIcon][] = [
   ["Art", Palette],
-  ["Music", Mic2],
+  ["Speaking", Mic2],
   ["Coding", Code2],
   ["Reading", BookOpen],
   ["Science", Brain],
-  ["Home Projects", Home]
+  ["Study Projects", Home]
 ];
 
 export const teachers = [
@@ -174,14 +182,14 @@ export const teachers = [
   {
     name: "Arjun Mehta",
     role: "Project & STEM Coach",
-    intro: "Helps children learn by building, explaining and experimenting.",
+    intro: "Helps learners build, explain, experiment and strengthen concepts.",
     strengths: ["Science projects", "Math clarity", "Coding basics"]
   },
   {
     name: "Nia Kapoor",
     role: "NIOS Academic Guide",
     intro: "Keeps older learners organized, calm and exam-ready.",
-    strengths: ["NIOS planning", "Revision rhythm", "Parent counselling"]
+    strengths: ["NIOS planning", "Revision rhythm", "TMA guidance"]
   }
 ];
 
@@ -189,31 +197,36 @@ export const testimonials = [
   {
     quote: "We were confused about flexible schooling. The counselling made the NIOS path feel clear and doable.",
     parent: "Parent of Aarav, 13",
-    result: "Built a 6-month study plan"
+    result: "Class 8 learner built a 6-month study plan"
   },
   {
     quote: "My daughter stopped seeing study time as punishment. The activities gave her confidence to speak and create.",
     parent: "Parent of Kiara, 8",
-    result: "Improved reading routine"
+    result: "Class 4 learner improved reading confidence"
   },
   {
-    quote: "The weekly updates helped us know exactly what to support at home. That clarity mattered most.",
+    quote: "The weekly updates and revision rhythm helped us prepare calmly instead of studying randomly.",
     parent: "Parent of Ishan, 15",
-    result: "Exam preparation stabilized"
+    result: "Class 10 student created a weekly revision plan"
+  },
+  {
+    quote: "TMA planning and subject guidance made Class 12 feel manageable with flexible schooling.",
+    parent: "Senior secondary learner",
+    result: "Class 12 learner got TMA and practical guidance"
   }
 ];
 
 export const galleryItems = [
   {
-    title: "Story Time Circle",
-    category: "Reading",
+    title: "Reading & Foundation",
+    category: "Classes 1-5",
     caption: "Guided reading, speaking prompts and vocabulary games.",
     color: "from-sky/55 to-mint/50",
     image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Children reading and learning together in a warm classroom setting",
     age: "Ages 6-9",
     proof: "Reading fluency",
-    outcome: "Children practice expression, recall and vocabulary through guided story prompts."
+    outcome: "Younger learners practice expression, recall and vocabulary through guided prompts."
   },
   {
     title: "Science Quest",
@@ -238,26 +251,26 @@ export const galleryItems = [
     outcome: "Art tasks become speaking, storytelling and fine-motor confidence builders."
   },
   {
-    title: "Project Day",
-    category: "Projects",
-    caption: "Children explain, build and present what they learned.",
+    title: "Project & Presentation Day",
+    category: "Classes 6-8",
+    caption: "Students explain, build and present what they learned.",
     color: "from-mint/55 to-sky/45",
     image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Children collaborating on classroom learning work",
+    imageAlt: "Students collaborating on classroom learning work",
     age: "Ages 8-16",
     proof: "Presentation skill",
     outcome: "Project demos help parents see understanding, effort and independent thinking."
   },
   {
-    title: "Coding Puzzle",
-    category: "STEM",
-    caption: "Logic games and early coding patterns for future skills.",
+    title: "Digital Study Skills",
+    category: "Classes 9-12",
+    caption: "Logic, research, planning and digital learning for older students.",
     color: "from-grape/45 to-sky/50",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Child using a laptop for guided digital learning",
+    imageAlt: "Student using a laptop for guided digital learning",
     age: "Ages 10-16",
     proof: "Problem solving",
-    outcome: "Puzzle-based coding builds sequencing, debugging and patient thinking."
+    outcome: "Digital learning builds research habits, sequencing, problem solving and patient thinking."
   },
   {
     title: "Parent Review",
@@ -280,7 +293,7 @@ export const mapPoints = [
 ] as [string, string, string, string][];
 
 export const admissions = [
-  ["Connect", "Share your child's age, current learning level and parent goals.", UsersRound],
+  ["Connect", "Share the student's class, current learning level and academic goals.", UsersRound],
   ["Counselling", "Get clarity on NIOS fit, program stage, subjects and support needs.", HeartHandshake],
   ["Learning Plan", "Receive a simple roadmap with weekly rhythm and milestones.", Lightbulb],
   ["Start Learning", "Begin classes, activities, progress updates and mentor check-ins.", Rocket]
@@ -288,16 +301,17 @@ export const admissions = [
 
 export const parentProof = [
   "No pressure-heavy coaching language",
-  "Clear NIOS support for parents",
-  "Creative learning for children",
+  "Clear NIOS support for students and parents",
+  "Creative learning for juniors",
+  "Exam planning for higher classes",
   "Structured progress checkpoints"
 ];
 
 export const faqs = [
-  ["Is this only for NIOS students?", "The platform is designed around NIOS-aligned support, but it also helps children who need flexible, creative academic guidance before or alongside open schooling."],
+  ["Is this only for NIOS students?", "The platform is designed around NIOS-aligned support, but it also helps learners who need flexible academic guidance before or alongside open schooling."],
   ["Do you help with NIOS subject planning?", "Yes. Counselling includes subject-fit discussion, learning rhythm, exam-readiness checkpoints and parent guidance. Official registration rules should always be confirmed through NIOS channels."],
   ["Do parents get progress updates?", "Yes. Parents get milestone updates, weekly focus areas and practical next steps so they know how to support learning at home."],
-  ["Are activities age appropriate?", "Programs are grouped by learning stage, and activities simplify or deepen based on the child's age, confidence and academic readiness."],
+  ["Are activities age appropriate?", "Programs are grouped by learning stage, and activities simplify or deepen based on the student's class, confidence and academic readiness."],
   ["Is this a replacement for official NIOS?", "No. This is a learning-support and mentoring platform. Official enrolment, eligibility, exam rules and certification remain with NIOS."]
 ];
 
@@ -335,7 +349,7 @@ export const niosInfoCards: [string, string, LucideIcon, string[]][] = [
   ],
   [
     "TMA Support",
-    "Tutor Marked Assignments can feel confusing for families. We help children understand, plan and complete assignment-style learning work.",
+    "Tutor Marked Assignments can feel confusing for families. We help students understand, plan and complete assignment-style learning work.",
     ClipboardCheck,
     ["Assignment planning guidance", "Topic understanding and drafting support", "Submission timeline reminders"]
   ],
@@ -360,8 +374,8 @@ export const niosInfoCards: [string, string, LucideIcon, string[]][] = [
 ];
 
 export const niosInfoSteps = [
-  ["Understand", "We discuss your child's current level, learning needs and family goals."],
+  ["Understand", "We discuss the student's current level, learning needs and family goals."],
   ["Plan", "We map the right stage: OBE, Secondary, Senior Secondary or remedial support."],
-  ["Support", "Children receive guided learning, practice routines, activities and review checkpoints."],
+  ["Support", "Students receive guided learning, practice routines, activities and review checkpoints."],
   ["Review", "Parents get clarity on progress, next steps and exam-readiness milestones."]
 ];

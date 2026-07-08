@@ -9,8 +9,8 @@ import { PageEmotionalSections, StorybookChapter } from "@/components/PageEnhanc
 import { SmoothScroll } from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "About NIOS Kids | Child-Friendly Flexible Learning Support",
-  description: "Learn how NIOS Kids supports children with joyful mentoring, parent clarity and flexible NIOS-aligned learning pathways."
+  title: "About NIOS Kids | Flexible Learning Support For Class 1-12",
+  description: "Learn how NIOS Kids supports younger learners and higher-class students with mentoring, parent clarity and NIOS-aligned pathways."
 };
 
 const principles: [string, string, LucideIcon][] = [
@@ -34,7 +34,7 @@ export default function AboutPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page about-page">
-        <Hero id="about" title="Flexible Learning, Clear And Joyful" copy="NIOS Kids helps families keep flexible learning child-friendly, structured and confidence-building with creative lessons, mentoring and parent guidance." imageSrc="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" imageAlt="Teacher and family discussing child learning progress in a classroom" primaryAction={{ href: "/programs", label: "Explore Programs", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/contact", label: "Talk To A Counsellor" }} />
+        <Hero id="about" title="Flexible Learning, Clear And Structured" copy="NIOS Kids helps families and students keep flexible learning warm, structured and confidence-building from foundation skills to board preparation." imageSrc="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" imageAlt="Teacher and family discussing student learning progress in a classroom" primaryAction={{ href: "/programs", label: "Explore Class Paths", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/contact", label: "Talk To A Mentor" }} />
 
         <StorybookChapter
           chapter="Chapter 01 - The Beginning"

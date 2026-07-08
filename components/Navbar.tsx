@@ -8,7 +8,7 @@ import { navItems } from "@/lib/site-data";
 
 const pageRoutes: Record<string, string> = {
   About: "/about",
-  Programs: "/programs",
+  "Class Paths": "/programs",
   Journey: "/learning-journey",
   Gallery: "/gallery",
   Admissions: "/admissions",
@@ -81,7 +81,7 @@ export function Navbar() {
               <HelpCircle className="size-5" aria-hidden />
               NIOS Info
             </a>
-            <a href="/contact" onClick={() => setOpen(false)} className="mobile-cta">Book Parent Counselling</a>
+            <a href="/contact" onClick={() => setOpen(false)} className="mobile-cta">Talk To A Mentor</a>
           </motion.div>
         )}
       </AnimatePresence>
