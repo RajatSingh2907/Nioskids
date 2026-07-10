@@ -36,7 +36,7 @@ export default function ContactPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page contact-page">
-        <Hero id="contact" title="Talk To A Mentor About Your Learning Path" copy="Share the student's class, current learning situation and NIOS goals. We will help you understand the best next step." imageSrc="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" imageAlt="Teacher and family discussing progress in a classroom environment" primaryAction={{ href: siteContact.whatsapp, label: "Message On WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call A Mentor" }} />
+        <Hero id="contact" title="Talk To A Mentor About Your Learning Path" copy="Share the student's class, current learning situation and NIOS goals. We will help you understand the best next step." imageSrc="/NiosImages/image%2023.png" imageAlt="Parents, child and mentor reviewing learning progress together at a table" primaryAction={{ href: siteContact.whatsapp, label: "Message On WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call A Mentor" }} />
 
         <StorybookChapter
           chapter="Chapter 06 - Counselling Camp"

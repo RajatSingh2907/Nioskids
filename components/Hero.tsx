@@ -41,8 +41,8 @@ export function Hero({
   copy = "Support for young learners building basics and older students preparing for Secondary, Senior Secondary, assignments and exams.",
   primaryAction = defaultPrimaryAction,
   secondaryAction = defaultSecondaryAction,
-  imageSrc = "/images/nios-learning-world.png",
-  imageAlt = "Students exploring a colorful NIOS learning world with books, planning tools and guided support",
+  imageSrc = "/NiosImages/image%2021.png",
+  imageAlt = "Smiling children showing colorful painted hands during a creative learning activity",
   priority = true,
   className = ""
 }: HeroProps) {

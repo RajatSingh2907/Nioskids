@@ -28,7 +28,7 @@ export default function ProgramsPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page programs-page">
-        <Hero id="programs" title="Class-Wise Learning Paths From 1 To 12" copy="Choose support for foundation years, middle-school concept clarity, Secondary preparation or Senior Secondary TMA, practical and exam readiness." imageSrc="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" imageAlt="Students reading and learning together in a classroom setting" primaryAction={{ href: "/contact", label: "Find My Learning Path", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/nios-info", label: "Understand NIOS Info" }} />
+        <Hero id="programs" title="Class-Wise Learning Paths From 1 To 12" copy="Choose support for foundation years, middle-school concept clarity, Secondary preparation or Senior Secondary TMA, practical and exam readiness." imageSrc="/NiosImages/image%204.png" imageAlt="Students and mentors learning together in a bright classroom with books and a laptop" primaryAction={{ href: "/contact", label: "Find My Learning Path", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: "/nios-info", label: "Understand NIOS Info" }} />
 
         <StorybookChapter
           chapter="Chapter 02 - Choose Your Stage"

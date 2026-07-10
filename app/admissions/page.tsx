@@ -35,7 +35,7 @@ export default function AdmissionsPage() {
       <SmoothScroll />
       <Navbar />
       <main className="trust-page admissions-page">
-        <Hero id="admissions" title="A Calm Start For Every Learning Stage" copy="Admission begins with a conversation, not pressure. We understand the student's class level, family goals and support needs before suggesting a pathway." imageSrc="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" imageAlt="Students working with a teacher during a hands-on classroom activity" primaryAction={{ href: "/contact", label: "Plan My NIOS Journey", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: siteContact.whatsapp, label: "WhatsApp Us" }} />
+        <Hero id="admissions" title="A Calm Start For Every Learning Stage" copy="Admission begins with a conversation, not pressure. We understand the student's class level, family goals and support needs before suggesting a pathway." imageSrc="/NiosImages/image%205.png" imageAlt="A student speaking confidently with a mentor while classmates listen in a classroom" primaryAction={{ href: "/contact", label: "Plan My NIOS Journey", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: siteContact.whatsapp, label: "WhatsApp Us" }} />
 
         <StorybookChapter
           chapter="Chapter 05 - The Welcome Gate"

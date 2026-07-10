@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     siteName: "NIOS Kids",
     type: "website",
     locale: "en_IN",
-    images: ["/images/nios-learning-world.png"]
+    images: ["/NiosImages/image%2021.png"]
   },
   twitter: {
     card: "summary_large_image",
     title: "NIOS Kids Learning Platform",
     description: "Flexible learning support for younger learners and higher-class NIOS students.",
-    images: ["/images/nios-learning-world.png"]
+    images: ["/NiosImages/image%2021.png"]
   }
 };
 

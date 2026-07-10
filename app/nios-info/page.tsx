@@ -20,7 +20,7 @@ export default function NiosInfoPage() {
       <SmoothScroll />
       <Navbar />
       <main className="nios-info-page">
-        <Hero id="nios-info" title="NIOS Questions Students And Parents Ask First" copy="A simple guide to OBE, Secondary, Senior Secondary, documents, TMA support, practical readiness and learning-support boundaries." imageSrc="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" imageAlt="Student using a laptop for guided digital learning" primaryAction={{ href: siteContact.whatsapp, label: "Ask on WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call A Mentor", icon: <Phone className="size-5" aria-hidden /> }} />
+        <Hero id="nios-info" title="NIOS Questions Students And Parents Ask First" copy="A simple guide to OBE, Secondary, Senior Secondary, documents, TMA support, practical readiness and learning-support boundaries." imageSrc="/NiosImages/image%2024.png" imageAlt="Older student studying with a laptop and notebook for guided digital learning" primaryAction={{ href: siteContact.whatsapp, label: "Ask on WhatsApp", icon: <ArrowRight className="size-5" aria-hidden /> }} secondaryAction={{ href: `tel:${siteContact.phone.replace(/\s/g, "")}`, label: "Call A Mentor", icon: <Phone className="size-5" aria-hidden /> }} />
 
         <StorybookChapter
           chapter="Chapter 07 - Parent Compass"
